@@ -1,0 +1,6 @@
+airsimneurips==1.2.0
+msgpack-python==0.5.6
+msgpack-rpc-python==0.4.1
+numpy==1.19.0
+opencv-python==4.2.0.34
+tornado==4.5.3
