@@ -3,7 +3,7 @@
 
 ## Quickstart
 - [Website](https://microsoft.github.io/AirSim-Drone-Racing-Lab/)
-- [Linux and Windows Binaries](https://github.com/microsoft/AirSim-NeurIPS2019-Drone-Racing/releases)
+- [Linux and Windows Binaries](https://github.com/microsoft/AirSim-Drone-Racing-Lab/releases)
 - [Python API Doc](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html), [airsimdroneracinglab PyPI package](https://pypi.org/project/airsimdroneracinglab/)
 
 <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_b99_3_drones.gif?raw=true" width="285"> <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_soccer_field_8_drones.gif?raw=true" width="285"> <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_zhangjiajie_4_drones.gif?raw=true" width="285">
@@ -44,7 +44,7 @@ Notes:
 		```
 		./AirSimDroneRacingLab.sh -windowed -NoVSync -BENCHMARK
 		```
-		You can also use the Unreal console commands `Stat FPS`, `Stat UnitGraph`, `r.VSync`, `t.maxFPS`. See [Issue #111](https://github.com/microsoft/AirSim-NeurIPS2019-Drone-Racing/issues/111) for more details. 
+		You can also use the Unreal console commands `Stat FPS`, `Stat UnitGraph`, `r.VSync`, `t.maxFPS`. See [Issue #111](https://github.com/microsoft/AirSim-Drone-Racing-Lab/issues/111) for more details. 
 
 - Windows
 	- Navigate to the `AirSim/` directory, and double-click `run.bat` (or `AirSimDroneRacingLab.exe -windowed`)
@@ -89,7 +89,7 @@ Notes:
 	     `$ ./run_docker_image.sh DOCKER_IMAGE_NAME:TAG headless`
 
 ## AirSim Drone Racing Lab Features and API
-- The API is documented at [airsimneurips API doc](https://microsoft.github.io/AirSim-NeurIPS2019-Drone-Racing/api.html)
+- The API is documented at [airsimdroneracinglab API doc](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html)
 
 - 
 
