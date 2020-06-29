@@ -21,16 +21,16 @@ def main(args):
     docker_image_builder.build_docker_image()
 
 if __name__=="__main__":
-    parser = ArgumentParser(description='AirSim Neurips-Game-of-Drones docker image builder')
+    parser = ArgumentParser(description='AirSim Drone Racing Lab docker image builder')
     parser.add_argument('--dockerfile', type=str, default='Dockerfile', help='path to docker file')
     parser.add_argument('--base_image', type=str, default="nvidia/cudagl:10.0-devel-ubuntu18.04", help='base image name AND tag, on top of which the target image is built')
     parser.add_argument('--target_image', type=str, help='desired name of target image name AND tag')
 
     args = parser.parse_args()
 
-    # if a target image name is not specified, let's call it airsim_neurips:SOURCE_IMAGE_TAG
+    # if a target image name is not specified, let's call it adrl:SOURCE_IMAGE_TAG
     if not args.target_image:
         target_image_tag = args.base_image.split(":")[1] 
-        args.target_image = 'airsim_neurips' + ':' + target_image_tag
+        args.target_image = 'adrl' + ':' + target_image_tag
 
     main(args)
