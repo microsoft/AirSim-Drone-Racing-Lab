@@ -8,33 +8,28 @@
 
 <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_b99_3_drones.gif?raw=true" width="275"> <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_soccer_field_8_drones.gif?raw=true" width="275"> <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_zhangjiajie_4_drones.gif?raw=true" width="275">
 
-### Downloading and running AirSim Drone Racing Lab Binaries
+### Using AirSim Drone Racing Lab Binaries
 #### Downloading
 - Linux
 	- Use the [download_linux_binaries.sh](download_linux_binaries.sh) script
-    - Python package:   
+    - Python client:   
         `pip install airsimdroneracinglab`
 	
-- Windows
-
-
-Notes:
--  `Source code (zip)` or `Source code (tar.gz)` might not be up-to-date with the master branch of this repository. It can be lagging by `n commits to master since this release`, specified on the released page.   
-	For the code on this repository, it's best to just `git clone`.  
+- Windows 
 
 #### Running
 - Linux
-	- Open a terminal window, `cd` to `AirSim_Training/` or `AirSim_Qualification` directory, and enter the following command:
+	- Running in windowed mode:
 		```
-		./AirSimDroneRacingLab.sh -windowed -opengl4
+		./ADRL/ADRL.sh -windowed
 		```
 	- Running headless (with rendering of images enabled):
 		```
-		DISPLAY= ./AirSimDroneRacingLab.sh -opengl4
+		DISPLAY= ./ADRL/ADRL.sh
 		```
 	- To disable rendering completely for training planning and / or control policies, you can use:
 		```
-		-./AirSimDroneRacingLab.sh -nullrhi
+		./ADRL/ADRL.sh -nullrhi
 		```
 		Note that `simGetImages` will not work with this option. 
 	- To increase speed of `simGetImages` / increase speed of Unreal Engine's game thread;
@@ -47,9 +42,9 @@ Notes:
 		You can also use the Unreal console commands `Stat FPS`, `Stat UnitGraph`, `r.VSync`, `t.maxFPS`. See [Issue #111](https://github.com/microsoft/AirSim-Drone-Racing-Lab/issues/111) for more details. 
 
 - Windows
-	- Navigate to the `AirSim/` directory, and double-click `run.bat` (or `AirSimDroneRacingLab.exe -windowed`)
+	- Navigate to the `ADRL/` directory, and double-click `run.bat` (or `ADRL.exe -windowed`)
 
-## Docker
+## Using Docker
 - Prerequisites:
 	- Install [docker-ce](https://docs.docker.com/install/linux/docker-ce/ubuntu/). 
 	- Complete the desired [post-installation steps for linux](https://docs.docker.com/install/linux/linux-postinstall/) after installing docker.    
@@ -77,12 +72,8 @@ Notes:
 	**Usage**
 	- for running default image, training binaries, in windowed mode:    
 	    `$ ./run_docker_image.sh "" training` 
-	- for running default image, qualification binaries, in windowed mode:    
-	    `$ ./run_docker_image.sh "" qualification` 
 	- for running default image, training binaries, in headless mode:    
 	    `$ ./run_docker_image.sh "" training headless`
-	- for running default image, qualification binaries, in headless mode:    
-	    `$ ./run_docker_image.sh "" qualification headless`
 	- for running a custom image in windowed mode, pass in you image name and tag:    
 	    `$ ./run_docker_image.sh DOCKER_IMAGE_NAME:TAG`
 	- for running a custom image in headless mode, pass in you image name and tag, followed by "headless":    
@@ -90,25 +81,6 @@ Notes:
 
 ## AirSim Drone Racing Lab Features and API
 - The API is documented at [airsimdroneracinglab API doc](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html)
-
-- 
-
-- 
     
 ## Questions
-Please open a Github Issue on **this** repository (not [AirSim](https://github.com/microsoft/AirSim)) for any technical questions w.r.t. the Neurips competition. 
-
-
-# Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Please open a Github Issue on **this** repository (not [AirSim](https://github.com/microsoft/AirSim)) for any technical questions associated with AirSim Drone Racing Lab. 
