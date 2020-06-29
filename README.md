@@ -6,7 +6,7 @@
 - [Linux and Windows Binaries](https://github.com/microsoft/AirSim-Drone-Racing-Lab/releases)
 - [Python API Doc](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html), [airsimdroneracinglab PyPI package](https://pypi.org/project/airsimdroneracinglab/)
 
-<img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_b99_3_drones.gif?raw=true" width="285"> <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_soccer_field_8_drones.gif?raw=true" width="285"> <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_zhangjiajie_4_drones.gif?raw=true" width="285">
+<img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_b99_3_drones.gif?raw=true" width="275"> <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_soccer_field_8_drones.gif?raw=true" width="275"> <img src="https://github.com/madratman/airsim_neurips_gifs/blob/master/imgs/neurips_zhangjiajie_4_drones.gif?raw=true" width="275">
 
 ### Downloading and running AirSim Drone Racing Lab Binaries
 #### Downloading
