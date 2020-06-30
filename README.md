@@ -6,7 +6,7 @@
 - [Linux and Windows Binaries](https://github.com/microsoft/AirSim-Drone-Racing-Lab/releases)
 - Python API:    
   - [`pip install airsimdroneracinglab`](https://pypi.org/project/airsimdroneracinglab/)   
-  - [Documentation](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html) 
+  - [Documentation](https://microsoft.github.io/AirSim-Drone-Racing-Lab/) 
 
 Note: If you use this repository in your research, please cite our pre-print, [AirSim Drone Racing Lab](https://arxiv.org/abs/2003.05654).
 
