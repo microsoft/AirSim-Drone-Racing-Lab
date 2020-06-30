@@ -8,7 +8,7 @@ airsimdroneracinglab
 This page documents `airsimdroneracinglab`_, the python package to be used for `AirSim Drone Racing Lab`_.
 
 .. _`airsimdroneracinglab`: https://pypi.org/project/airsimdroneracinglab/
-.. _`Game of Drones: A NeurIPS 2019 Competition`: https://github.com/microsoft/AirSim-Drone-Racing-Lab 
+.. _`AirSim Drone Racing Lab`: https://github.com/microsoft/AirSim-Drone-Racing-Lab 
 
 
 .. toctree::
