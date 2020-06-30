@@ -1,0 +1,53 @@
+:mod:`airsimdroneracinglab.baseline`
+====================================
+
+.. py:module:: airsimdroneracinglab.baseline
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   airsimdroneracinglab.baseline.BaselineRacer
+
+
+
+.. py:class:: BaselineRacer(client, viz_traj=True, viz_traj_color_rgba=[1.0, 0.0, 0.0, 1.0])
+
+   Bases: :class:`object`
+
+   Class for drone_2, which flies through gates using moveOnSpline when simStartRace is called.
+
+   .. method:: initialize_drone(self)
+
+
+
+   .. method:: takeoffAsync(self)
+
+
+
+   .. method:: takeoff_with_moveOnSpline(self, takeoff_height=0.1)
+
+
+
+   .. method:: get_ground_truth_gate_poses(self)
+
+
+
+   .. method:: fly_through_all_gates_at_once_with_moveOnSpline(self)
+
+
+
+   .. method:: takeoff_and_fly_through_all_gates_at_once_with_moveOnSpline(self)
+
+
+
+   .. method:: run_in_thread(self)
+
+
+
+

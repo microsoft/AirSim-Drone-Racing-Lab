@@ -1,0 +1,182 @@
+:mod:`airsimdroneracinglab.utils`
+=================================
+
+.. py:module:: airsimdroneracinglab.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   airsimdroneracinglab.utils.string_to_uint8_array
+   airsimdroneracinglab.utils.string_to_float_array
+   airsimdroneracinglab.utils.list_to_2d_float_array
+   airsimdroneracinglab.utils.get_pfm_array
+   airsimdroneracinglab.utils.get_public_fields
+   airsimdroneracinglab.utils.to_dict
+   airsimdroneracinglab.utils.to_str
+   airsimdroneracinglab.utils.write_file
+   airsimdroneracinglab.utils.to_eularian_angles
+   airsimdroneracinglab.utils.to_quaternion
+   airsimdroneracinglab.utils.wait_key
+   airsimdroneracinglab.utils.wait_key
+   airsimdroneracinglab.utils.read_pfm
+   airsimdroneracinglab.utils.write_pfm
+   airsimdroneracinglab.utils.write_png
+
+
+.. function:: string_to_uint8_array(bstr)
+
+   :param bstr: Description
+   :type bstr: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: string_to_float_array(bstr)
+
+   :param bstr: Description
+   :type bstr: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: list_to_2d_float_array(flst, width, height)
+
+   :param flst: Description
+   :type flst: TYPE
+   :param width: Description
+   :type width: TYPE
+   :param height: Description
+   :type height: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: get_pfm_array(response)
+
+   :param response: Description
+   :type response: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: get_public_fields(obj)
+
+   :param obj: Description
+   :type obj: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: to_dict(obj)
+
+   :param obj: Description
+   :type obj: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: to_str(obj)
+
+   :param obj: Description
+   :type obj: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: write_file(filename, bstr)
+
+   :param filename: Description
+   :type filename: TYPE
+   :param bstr: Description
+   :type bstr: TYPE
+
+
+.. function:: to_eularian_angles(q)
+
+   :param q: Description
+   :type q: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: to_quaternion(pitch, roll, yaw)
+
+   :param pitch: Description
+   :type pitch: TYPE
+   :param roll: Description
+   :type roll: TYPE
+   :param yaw: Description
+   :type yaw: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: wait_key(message='')
+
+   Wait for a key press on the console and return it.
+
+
+.. function:: wait_key(message='')
+
+   Wait for a key press on the console and return it.
+
+   :param message: Description
+   :type message: str, optional
+
+   :returns: Description
+   :rtype: TYPE
+
+
+.. function:: read_pfm(file)
+
+   Read a pfm file
+
+   :param file: Description
+   :type file: TYPE
+
+   :returns: Description
+   :rtype: TYPE
+
+   :raises Exception: Description
+
+
+.. function:: write_pfm(file, image, scale=1)
+
+   Write a pfm file
+
+   :param file: Description
+   :type file: TYPE
+   :param image: Description
+   :type image: TYPE
+   :param scale: Description
+   :type scale: int, optional
+
+   :raises Exception: Description
+
+
+.. function:: write_png(filename, image)
+
+   image must be numpy array H X W X channels
+
+   :param filename: Description
+   :type filename: TYPE
+   :param image: Description
+   :type image: TYPE
+
+

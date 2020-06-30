@@ -1,0 +1,2203 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>airsimdroneracinglab.client &mdash; airsimdroneracinglab 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> airsimdroneracinglab
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">airsimdroneracinglab</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">airsimdroneracinglab.client</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/autoapi/airsimdroneracinglab/client/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-airsimdroneracinglab.client">
+<span id="airsimdroneracinglab-client"></span><h1><a class="reference internal" href="#module-airsimdroneracinglab.client" title="airsimdroneracinglab.client"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airsimdroneracinglab.client</span></code></a><a class="headerlink" href="#module-airsimdroneracinglab.client" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#airsimdroneracinglab.client.VehicleClient" title="airsimdroneracinglab.client.VehicleClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VehicleClient</span></code></a>(ip='', port=41451, timeout_value=3600)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#airsimdroneracinglab.client.MultirotorClient" title="airsimdroneracinglab.client.MultirotorClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultirotorClient</span></code></a>(ip='', port=41451, timeout_value=3600)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt id="airsimdroneracinglab.client.VehicleClient">
+<em class="property">class </em><code class="sig-prename descclassname">airsimdroneracinglab.client.</code><code class="sig-name descname">VehicleClient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ip</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">41451</span></em>, <em class="sig-param"><span class="n">timeout_value</span><span class="o">=</span><span class="default_value">3600</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="airsimdroneracinglab.client.VehicleClient.__annotations__">
+<code class="sig-name descname">__annotations__</code><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.__annotations__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the vehicle to its original starting state</p>
+<p>Note that you must call <cite>enableApiControl</cite> and <cite>armDisarm</cite> again after the call to reset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.ping">
+<code class="sig-name descname">ping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.ping" title="Permalink to this definition">¶</a></dt>
+<dd><p>If connection is established then this call will return true otherwise it will be blocked until timeout</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getClientVersion">
+<code class="sig-name descname">getClientVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getClientVersion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getServerVersion">
+<code class="sig-name descname">getServerVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getServerVersion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getMinRequiredServerVersion">
+<code class="sig-name descname">getMinRequiredServerVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getMinRequiredServerVersion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getMinRequiredClientVersion">
+<code class="sig-name descname">getMinRequiredClientVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getMinRequiredClientVersion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.enableApiControl">
+<code class="sig-name descname">enableApiControl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.enableApiControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables API control for vehicle with name vehicle_name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to enable API control for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.disableApiControl">
+<code class="sig-name descname">disableApiControl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.disableApiControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables API control for vehicle with name vehicle_name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to disable API control for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.isApiControlEnabled">
+<code class="sig-name descname">isApiControlEnabled</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.isApiControlEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if API control is established.</p>
+<p>If false (which is default) then API calls would be ignored. After a successful call to <cite>enableApiControl</cite>, <cite>isApiControlEnabled</cite> should return true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If API control is enabled</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.arm">
+<code class="sig-name descname">arm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.arm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arms vehicle corresponding to vehicle_name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of vehicle</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.disarm">
+<code class="sig-name descname">disarm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.disarm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disarms vehicle corresponding to vehicle_name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of vehicle</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPause">
+<code class="sig-name descname">simPause</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">is_paused</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses simulation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>is_paused</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – True to pause the simulation, False to release</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simIsPause">
+<code class="sig-name descname">simIsPause</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simIsPause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the simulation is paused</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If the simulation is paused</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simContinueForTime">
+<code class="sig-name descname">simContinueForTime</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">seconds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simContinueForTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continue the simulation for the specified number of seconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seconds</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Time to run the simulation for</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getHomeGeoPoint">
+<code class="sig-name descname">getHomeGeoPoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getHomeGeoPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Home location of the vehicle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to get home location of</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Home location of the vehicle</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id876" title="airsimdroneracinglab.GeoPoint">GeoPoint</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.confirmConnection">
+<code class="sig-name descname">confirmConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.confirmConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks state of connection every 1 sec and reports it in Console so user can see the progress for connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSwapTextures">
+<code class="sig-name descname">simSwapTextures</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">tags</span></em>, <em class="sig-param"><span class="n">tex_id</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">component_id</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">material_id</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSwapTextures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runtime Swap Texture API</p>
+<p>See <a class="reference external" href="https://microsoft.github.io/AirSim/retexturing/">https://microsoft.github.io/AirSim/retexturing/</a> for details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – string of “,” or “, ” delimited tags to identify on which actors to perform the swap</p></li>
+<li><p><strong>tex_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – <p>indexes the array of textures assigned to each actor undergoing a swap</p>
+<p>If out-of-bounds for some object’s texture set, it will be taken modulo the number of textures that were available</p>
+</p></li>
+<li><p><strong>component_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>material_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of objects which matched the provided tags and had the texture swap perfomed</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetTimeOfDay">
+<code class="sig-name descname">simSetTimeOfDay</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">is_enabled</span></em>, <em class="sig-param"><span class="n">start_datetime</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">is_start_datetime_dst</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">celestial_clock_speed</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">update_interval_secs</span><span class="o">=</span><span class="default_value">60</span></em>, <em class="sig-param"><span class="n">move_sun</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetTimeOfDay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control the position of Sun in the environment</p>
+<p>Sun’s position is computed using the coordinates specified in <cite>OriginGeopoint</cite> in settings for the date-time specified in the argument,
+else if the string is empty, current date &amp; time is used</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_enabled</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – True to enable time-of-day effect, False to reset the position to original</p></li>
+<li><p><strong>start_datetime</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Date &amp; Time in %Y-%m-%d %H:%M:%S format, e.g. <cite>2018-02-12 15:20:00</cite></p></li>
+<li><p><strong>is_start_datetime_dst</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – True to adjust for Daylight Savings Time</p></li>
+<li><p><strong>celestial_clock_speed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Run celestial clock faster or slower than simulation clock
+E.g. Value 100 means for every 1 second of simulation clock, Sun’s position is advanced by 100 seconds
+so Sun will move in sky much faster</p></li>
+<li><p><strong>update_interval_secs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Interval to update the Sun’s position</p></li>
+<li><p><strong>move_sun</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether or not to move the Sun</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simEnableWeather">
+<code class="sig-name descname">simEnableWeather</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">enable</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simEnableWeather" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable Weather effects. Needs to be called before using <cite>simSetWeatherParameter</cite> API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>enable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – True to enable, False to disable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetWeatherParameter">
+<code class="sig-name descname">simSetWeatherParameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">param</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetWeatherParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable various weather effects</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param</strong> (<a class="reference internal" href="../index.html#id802" title="airsimdroneracinglab.WeatherParameter"><em>WeatherParameter</em></a>) – Weather effect to be enabled</p></li>
+<li><p><strong>val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Intensity of the effect, Range 0-1</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetTextureFromUrl">
+<code class="sig-name descname">simSetTextureFromUrl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">object_name</span></em>, <em class="sig-param"><span class="n">url</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetTextureFromUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set texture of an object from a URL resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object_name</strong> (<em>string</em>) – Name of object for which the texture is to be set</p></li>
+<li><p><strong>url</strong> (<em>string</em>) – URL of texture file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetImage">
+<code class="sig-name descname">simGetImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">camera_name</span></em>, <em class="sig-param"><span class="n">image_type</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a single image</p>
+<p>Returns bytes of png format image which can be dumped into abinary file to create .png image
+<cite>string_to_uint8_array()</cite> can be used to convert into Numpy unit8 array
+See <a class="reference external" href="https://microsoft.github.io/AirSim/image_apis/">https://microsoft.github.io/AirSim/image_apis/</a> for details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the camera, for backwards compatibility, ID numbers such as 0,1,etc. can also be used</p></li>
+<li><p><strong>image_type</strong> (<a class="reference internal" href="../index.html#id775" title="airsimdroneracinglab.ImageType"><em>ImageType</em></a>) – Type of image required</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle with the camera</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Binary string literal of compressed png image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetImages">
+<code class="sig-name descname">simGetImages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">requests</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get multiple images</p>
+<p>See <a class="reference external" href="https://microsoft.github.io/AirSim/image_apis/">https://microsoft.github.io/AirSim/image_apis/</a> for details and examples</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>requests</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id907" title="airsimdroneracinglab.ImageRequest"><em>ImageRequest</em></a><em>]</em>) – Images required</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle associated with the camera</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a>[<a class="reference internal" href="../index.html#id916" title="airsimdroneracinglab.ImageResponse">ImageResponse</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetMeshPositionVertexBuffers">
+<code class="sig-name descname">simGetMeshPositionVertexBuffers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetMeshPositionVertexBuffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the static meshes that make up the scene</p>
+<p>See <a class="reference external" href="https://microsoft.github.io/AirSim/meshes/">https://microsoft.github.io/AirSim/meshes/</a> for details and how to use this</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a>[<a class="reference internal" href="../index.html#id1081" title="airsimdroneracinglab.MeshPositionVertexBuffersResponse">MeshPositionVertexBuffersResponse</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetCollisionInfo">
+<code class="sig-name descname">simGetCollisionInfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetCollisionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the Vehicle to get the info of</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id859" title="airsimdroneracinglab.CollisionInfo">CollisionInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetVehiclePose">
+<code class="sig-name descname">simSetVehiclePose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">pose</span></em>, <em class="sig-param"><span class="n">ignore_collison</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetVehiclePose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the pose of the vehicle</p>
+<p>If you don’t want to change position (or orientation) then just set components of position (or orientation) to floating point nan values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose</strong> (<a class="reference internal" href="../index.html#id853" title="airsimdroneracinglab.Pose"><em>Pose</em></a>) – Desired Pose pf the vehicle</p></li>
+<li><p><strong>ignore_collision</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – Whether to ignore any collision or not</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle to move</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetVehiclePose">
+<code class="sig-name descname">simGetVehiclePose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetVehiclePose" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle to get the Pose of</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id853" title="airsimdroneracinglab.Pose">Pose</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetTraceLine">
+<code class="sig-name descname">simSetTraceLine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">color_rgba</span></em>, <em class="sig-param"><span class="n">thickness</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetTraceLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify the color and thickness of the line when Tracing is enabled</p>
+<p>Tracing can be enabled by pressing T in the Editor or setting <cite>EnableTrace</cite> to <cite>True</cite> in the Vehicle Settings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – desired RGBA values from 0.0 to 1.0</p></li>
+<li><p><strong>thickness</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Thickness of the line</p></li>
+<li><p><strong>vehicle_name</strong> (<em>string</em><em>, </em><em>optional</em>) – Name of the vehicle to set Trace line values for</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetObjectPose">
+<code class="sig-name descname">simGetObjectPose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">object_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetObjectPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true pose if simstartrace is not called
+Returns true pose if simstartrace was called with tier=1
+Returns noisy pose if simstartrace was called with tier=2 or tier=3</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>object_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the object to get pose for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pose of desired object, NanPose if object not found</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id853" title="airsimdroneracinglab.Pose">Pose</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.__internalGetObjectPose">
+<code class="sig-name descname">__internalGetObjectPose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">object_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.__internalGetObjectPose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetObjectPose">
+<code class="sig-name descname">simSetObjectPose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">object_name</span></em>, <em class="sig-param"><span class="n">pose</span></em>, <em class="sig-param"><span class="n">teleport</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetObjectPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the pose of the object(actor) in the environment</p>
+<p>The specified actor must have Mobility set to movable, otherwise there will be undefined behaviour.
+See <a class="reference external" href="https://www.unrealengine.com/en-US/blog/moving-physical-objects">https://www.unrealengine.com/en-US/blog/moving-physical-objects</a> for details on how to set Mobility and the effect of Teleport parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the object(actor) to move</p></li>
+<li><p><strong>pose</strong> (<a class="reference internal" href="../index.html#id853" title="airsimdroneracinglab.Pose"><em>Pose</em></a>) – Desired Pose of the object</p></li>
+<li><p><strong>teleport</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to move the object immediately without affecting their velocity</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the move was successful</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetNominalGateInnerDimensions">
+<code class="sig-name descname">simGetNominalGateInnerDimensions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetNominalGateInnerDimensions" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Return the dimensions of the drone racing gate cavity, with scale (width=1.0, thickness=1.0, height=1.0)</p></li>
+<li><p>Use this API in conjunction with simGetObjectScale(), simSetObjectScale(), simSetObjectPose() to generate arbitrary sized checkered gates with arbitrary poses.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>width, thickness, height of the gate inner cavity in meters.
+See <a class="reference external" href="https://github.com/microsoft/AirSim-NeurIPS2019-Drone-Racing/issues/28">https://github.com/microsoft/AirSim-NeurIPS2019-Drone-Racing/issues/28</a> for gate coordinate system</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r">Vector3r</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetNominalGateOuterDimensions">
+<code class="sig-name descname">simGetNominalGateOuterDimensions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetNominalGateOuterDimensions" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Return the outer dimensions of the drone racing gate, with scale (width=1.0, thickness=1.0, height=1.0)</p></li>
+<li><p>Use this API in conjunction with simGetObjectScale(), simSetObjectScale(), simSetObjectPose() to generate arbitrary sized checkered gates with arbitrary poses.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>width, thickness, height of the gate inner cavity in meters.
+See <a class="reference external" href="https://github.com/microsoft/AirSim-NeurIPS2019-Drone-Racing/issues/28">https://github.com/microsoft/AirSim-NeurIPS2019-Drone-Racing/issues/28</a> for gate coordinate system</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r">Vector3r</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetObjectScale">
+<code class="sig-name descname">simGetObjectScale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">object_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetObjectScale" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>object_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the object to poll</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>scale vector of desired object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r">Vector3r</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetObjectScaleInternal">
+<code class="sig-name descname">simGetObjectScaleInternal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">object_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetObjectScaleInternal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetObjectScale">
+<code class="sig-name descname">simSetObjectScale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">object_name</span></em>, <em class="sig-param"><span class="n">scale_vector</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetObjectScale" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the object to poll</p></li>
+<li><p><strong>scale</strong> (<a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a>) – desired scale of the object</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simLoadLevel">
+<code class="sig-name descname">simLoadLevel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">level_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simLoadLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads desired level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Description</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Description</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simListSceneObjects">
+<code class="sig-name descname">simListSceneObjects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">'.*'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simListSceneObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the objects present in the environment</p>
+<p>Default behaviour is to list all objects, regex can be used to return smaller list of matching objects or actors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name_regex</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – String to match actor names against, e.g. “Cylinder.*”</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List containing all the names</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetSegmentationObjectID">
+<code class="sig-name descname">simSetSegmentationObjectID</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">mesh_name</span></em>, <em class="sig-param"><span class="n">object_id</span></em>, <em class="sig-param"><span class="n">is_name_regex</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetSegmentationObjectID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set segmentation ID for specific objects</p>
+<p>See <a class="reference external" href="https://microsoft.github.io/AirSim/image_apis/#segmentation">https://microsoft.github.io/AirSim/image_apis/#segmentation</a> for details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the mesh to set the ID of (supports regex)</p></li>
+<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – <p>Object ID to be set, range 0-255</p>
+<p>RBG values for IDs can be seen at <a class="reference external" href="https://microsoft.github.io/AirSim/seg_rgbs.txt">https://microsoft.github.io/AirSim/seg_rgbs.txt</a></p>
+</p></li>
+<li><p><strong>is_name_regex</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether the mesh name is a regex</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the mesh was found</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetSegmentationObjectID">
+<code class="sig-name descname">simGetSegmentationObjectID</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">mesh_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetSegmentationObjectID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Object ID for the given mesh name</p>
+<p>Mapping of Object IDs to RGB values can be seen at <a class="reference external" href="https://microsoft.github.io/AirSim/seg_rgbs.txt">https://microsoft.github.io/AirSim/seg_rgbs.txt</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mesh_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the mesh to get the ID of</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPrintLogMessage">
+<code class="sig-name descname">simPrintLogMessage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">message_param</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">severity</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPrintLogMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the specified message in the simulator’s window.</p>
+<p>If message_param is supplied, then it’s printed next to the message and in that case if this API is called with same message value
+but different message_param again then previous line is overwritten with new line (instead of API creating new line on display).</p>
+<p>For example, <cite>simPrintLogMessage(“Iteration: “, to_string(i))</cite> keeps updating same line on display when API is called with different values of i.
+The valid values of severity parameter is 0 to 3 inclusive that corresponds to different colors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Message to be printed</p></li>
+<li><p><strong>message_param</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Parameter to be printed next to the message</p></li>
+<li><p><strong>severity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Range 0-3, inclusive, corresponding to the severity of the message</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetCameraInfo">
+<code class="sig-name descname">simGetCameraInfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">camera_name</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetCameraInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get details about the camera</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the camera, for backwards compatibility, ID numbers such as 0,1,etc. can also be used</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Vehicle which the camera is associated with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id993" title="airsimdroneracinglab.CameraInfo">CameraInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetCameraOrientation">
+<code class="sig-name descname">simSetCameraOrientation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">camera_name</span></em>, <em class="sig-param"><span class="n">orientation</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetCameraOrientation" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Control the orientation of a selected camera</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the camera to be controlled</p></li>
+<li><p><strong>orientation</strong> (<a class="reference internal" href="../index.html#id830" title="airsimdroneracinglab.Quaternionr"><em>Quaternionr</em></a>) – Quaternion representing the desired orientation of the camera</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle which the camera corresponds to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simSetCameraFov">
+<code class="sig-name descname">simSetCameraFov</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">camera_name</span></em>, <em class="sig-param"><span class="n">fov_degrees</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simSetCameraFov" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Control the field of view of a selected camera</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the camera to be controlled</p></li>
+<li><p><strong>fov_degrees</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Value of field of view in degrees</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle which the camera corresponds to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetGroundTruthKinematics">
+<code class="sig-name descname">simGetGroundTruthKinematics</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetGroundTruthKinematics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Ground truth kinematics of the vehicle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Ground truth of the vehicle</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id948" title="airsimdroneracinglab.KinematicsState">KinematicsState</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetGroundTruthEnvironment">
+<code class="sig-name descname">simGetGroundTruthEnvironment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetGroundTruthEnvironment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get ground truth environment state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Ground truth environment state</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id961" title="airsimdroneracinglab.EnvironmentState">EnvironmentState</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getImuData">
+<code class="sig-name descname">getImuData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">imu_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getImuData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imu_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of IMU to get data from, specified in settings.json</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to which the sensor corresponds to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id1004" title="airsimdroneracinglab.ImuData">ImuData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getBarometerData">
+<code class="sig-name descname">getBarometerData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">barometer_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getBarometerData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>barometer_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of Barometer to get data from, specified in settings.json</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to which the sensor corresponds to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id1009" title="airsimdroneracinglab.BarometerData">BarometerData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getMagnetometerData">
+<code class="sig-name descname">getMagnetometerData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">magnetometer_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getMagnetometerData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>magnetometer_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of Magnetometer to get data from, specified in settings.json</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to which the sensor corresponds to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id1014" title="airsimdroneracinglab.MagnetometerData">MagnetometerData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getGpsData">
+<code class="sig-name descname">getGpsData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">gps_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getGpsData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gps_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of GPS to get data from, specified in settings.json</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to which the sensor corresponds to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id1030" title="airsimdroneracinglab.GpsData">GpsData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getDistanceSensorData">
+<code class="sig-name descname">getDistanceSensorData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">distance_sensor_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getDistanceSensorData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distance_sensor_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of Distance Sensor to get data from, specified in settings.json</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to which the sensor corresponds to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id1034" title="airsimdroneracinglab.DistanceSensorData">DistanceSensorData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.getLidarData">
+<code class="sig-name descname">getLidarData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">lidar_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.getLidarData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lidar_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of Lidar to get data from, specified in settings.json</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of vehicle to which the sensor corresponds to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id1000" title="airsimdroneracinglab.LidarData">LidarData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simGetLidarSegmentation">
+<code class="sig-name descname">simGetLidarSegmentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">lidar_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simGetLidarSegmentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Segmentation ID of each point’s collided object in the last Lidar update</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lidar_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of Lidar sensor</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle wth the sensor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Segmentation IDs of the objects</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simFlushPersistentMarkers">
+<code class="sig-name descname">simFlushPersistentMarkers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simFlushPersistentMarkers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear any persistent markers - those plotted with setting <cite>is_persistent=True</cite> in the APIs below</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPlotPoints">
+<code class="sig-name descname">simPlotPoints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">color_rgba</span><span class="o">=</span><span class="default_value">[1.0, 0.0, 0.0, 1.0]</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">- 1.0</span></em>, <em class="sig-param"><span class="n">is_persistent</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPlotPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a list of 3D points in World NED frame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – List of Vector3r objects</p></li>
+<li><p><strong>color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><em>optional</em>) – desired RGBA values from 0.0 to 1.0</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Size of plotted point</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Duration (seconds) to plot for</p></li>
+<li><p><strong>is_persistent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – If set to True, the desired object will be plotted for infinite time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPlotLineStrip">
+<code class="sig-name descname">simPlotLineStrip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">color_rgba</span><span class="o">=</span><span class="default_value">[1.0, 0.0, 0.0, 1.0]</span></em>, <em class="sig-param"><span class="n">thickness</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">- 1.0</span></em>, <em class="sig-param"><span class="n">is_persistent</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPlotLineStrip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a line strip in World NED frame, defined from points[0] to points[1], points[1] to points[2], … , points[n-2] to points[n-1]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – List of 3D locations of line start and end points, specified as Vector3r objects</p></li>
+<li><p><strong>color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><em>optional</em>) – desired RGBA values from 0.0 to 1.0</p></li>
+<li><p><strong>thickness</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Thickness of line</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Duration (seconds) to plot for</p></li>
+<li><p><strong>is_persistent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – If set to True, the desired object will be plotted for infinite time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPlotLineList">
+<code class="sig-name descname">simPlotLineList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">points</span></em>, <em class="sig-param"><span class="n">color_rgba</span><span class="o">=</span><span class="default_value">[1.0, 0.0, 0.0, 1.0]</span></em>, <em class="sig-param"><span class="n">thickness</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">- 1.0</span></em>, <em class="sig-param"><span class="n">is_persistent</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPlotLineList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a line strip in World NED frame, defined from points[0] to points[1], points[2] to points[3], … , points[n-2] to points[n-1]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – List of 3D locations of line start and end points, specified as Vector3r objects. Must be even</p></li>
+<li><p><strong>color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><em>optional</em>) – desired RGBA values from 0.0 to 1.0</p></li>
+<li><p><strong>thickness</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Thickness of line</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Duration (seconds) to plot for</p></li>
+<li><p><strong>is_persistent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – If set to True, the desired object will be plotted for infinite time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPlotArrows">
+<code class="sig-name descname">simPlotArrows</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">points_start</span></em>, <em class="sig-param"><span class="n">points_end</span></em>, <em class="sig-param"><span class="n">color_rgba</span><span class="o">=</span><span class="default_value">[1.0, 0.0, 0.0, 1.0]</span></em>, <em class="sig-param"><span class="n">thickness</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">arrow_size</span><span class="o">=</span><span class="default_value">2.0</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">- 1.0</span></em>, <em class="sig-param"><span class="n">is_persistent</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPlotArrows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a list of arrows in World NED frame, defined from points_start[0] to points_end[0], points_start[1] to points_end[1], … , points_start[n-1] to points_end[n-1]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points_start</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – List of 3D start positions of arrow start positions, specified as Vector3r objects</p></li>
+<li><p><strong>points_end</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – List of 3D end positions of arrow start positions, specified as Vector3r objects</p></li>
+<li><p><strong>color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><em>optional</em>) – desired RGBA values from 0.0 to 1.0</p></li>
+<li><p><strong>thickness</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Thickness of line</p></li>
+<li><p><strong>arrow_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Size of arrow head</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Duration (seconds) to plot for</p></li>
+<li><p><strong>is_persistent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – If set to True, the desired object will be plotted for infinite time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPlotStrings">
+<code class="sig-name descname">simPlotStrings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">strings</span></em>, <em class="sig-param"><span class="n">positions</span></em>, <em class="sig-param"><span class="n">scale</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">color_rgba</span><span class="o">=</span><span class="default_value">[1.0, 0.0, 0.0, 1.0]</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">- 1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPlotStrings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a list of strings at desired positions in World NED frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>strings</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><em>String</em><em>]</em><em>, </em><em>optional</em>) – List of strings to plot</p></li>
+<li><p><strong>positions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – List of positions where the strings should be plotted. Should be in one-to-one correspondence with the strings’ list</p></li>
+<li><p><strong>scale</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Font scale of transform name</p></li>
+<li><p><strong>color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><em>optional</em>) – desired RGBA values from 0.0 to 1.0</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Duration (seconds) to plot for</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPlotTransforms">
+<code class="sig-name descname">simPlotTransforms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">poses</span></em>, <em class="sig-param"><span class="n">scale</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">thickness</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">- 1.0</span></em>, <em class="sig-param"><span class="n">is_persistent</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPlotTransforms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a list of transforms in World NED frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>poses</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id853" title="airsimdroneracinglab.Pose"><em>Pose</em></a><em>]</em>) – List of Pose objects representing the transforms to plot</p></li>
+<li><p><strong>scale</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Length of transforms’ axes</p></li>
+<li><p><strong>thickness</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Thickness of transforms’ axes</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Duration (seconds) to plot for</p></li>
+<li><p><strong>is_persistent</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – If set to True, the desired object will be plotted for infinite time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.simPlotTransformsWithNames">
+<code class="sig-name descname">simPlotTransformsWithNames</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">poses</span></em>, <em class="sig-param"><span class="n">names</span></em>, <em class="sig-param"><span class="n">tf_scale</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">tf_thickness</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">text_scale</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">text_color_rgba</span><span class="o">=</span><span class="default_value">[1.0, 0.0, 0.0, 1.0]</span></em>, <em class="sig-param"><span class="n">duration</span><span class="o">=</span><span class="default_value">- 1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.simPlotTransformsWithNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a list of transforms with their names in World NED frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>poses</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id853" title="airsimdroneracinglab.Pose"><em>Pose</em></a><em>]</em>) – List of Pose objects representing the transforms to plot</p></li>
+<li><p><strong>names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><em>string</em><em>]</em>) – List of strings with one-to-one correspondence to list of poses</p></li>
+<li><p><strong>tf_scale</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Length of transforms’ axes</p></li>
+<li><p><strong>tf_thickness</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Thickness of transforms’ axes</p></li>
+<li><p><strong>text_scale</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Font scale of transform name</p></li>
+<li><p><strong>text_color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><em>optional</em>) – desired RGBA values from 0.0 to 1.0 for the transform name</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Duration (seconds) to plot for</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.cancelLastTask">
+<code class="sig-name descname">cancelLastTask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.cancelLastTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancel previous Async task</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.VehicleClient.waitOnLastTask">
+<code class="sig-name descname">waitOnLastTask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">float('nan')</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.VehicleClient.waitOnLastTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for the last Async task to complete</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timeout_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Time for the task to complete</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>Result of the last task</p>
+<blockquote>
+<div><p>True if the task completed without cancellation or timeout</p>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="airsimdroneracinglab.client.MultirotorClient">
+<em class="property">class </em><code class="sig-prename descclassname">airsimdroneracinglab.client.</code><code class="sig-name descname">MultirotorClient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ip</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">41451</span></em>, <em class="sig-param"><span class="n">timeout_value</span><span class="o">=</span><span class="default_value">3600</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#airsimdroneracinglab.client.VehicleClient" title="airsimdroneracinglab.client.VehicleClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">airsimdroneracinglab.client.VehicleClient</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py attribute">
+<dt id="airsimdroneracinglab.client.MultirotorClient.__annotations__">
+<code class="sig-name descname">__annotations__</code><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.__annotations__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.takeoffAsync">
+<code class="sig-name descname">takeoffAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.takeoffAsync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takeoff vehicle to 3m above ground. Vehicle should not be moving when this API is used</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Timeout for the vehicle to reach desired altitude</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.landAsync">
+<code class="sig-name descname">landAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">60</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.landAsync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Land the vehicle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Timeout for the vehicle to land</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.goHomeAsync">
+<code class="sig-name descname">goHomeAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">3e+38</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.goHomeAsync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return vehicle to Home i.e. Launch location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Timeout for the vehicle to reach desired altitude</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the vehicle to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByAngleZAsync">
+<code class="sig-name descname">moveByAngleZAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">pitch</span></em>, <em class="sig-param"><span class="n">roll</span></em>, <em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">yaw</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByAngleZAsync" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByAngleThrottleAsync">
+<code class="sig-name descname">moveByAngleThrottleAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">pitch</span></em>, <em class="sig-param"><span class="n">roll</span></em>, <em class="sig-param"><span class="n">throttle</span></em>, <em class="sig-param"><span class="n">yaw_rate</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByAngleThrottleAsync" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByVelocityAsync">
+<code class="sig-name descname">moveByVelocityAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vx</span></em>, <em class="sig-param"><span class="n">vy</span></em>, <em class="sig-param"><span class="n">vz</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">drivetrain</span><span class="o">=</span><span class="default_value">DrivetrainType.MaxDegreeOfFreedom</span></em>, <em class="sig-param"><span class="n">yaw_mode</span><span class="o">=</span><span class="default_value">YawMode()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByVelocityAsync" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – desired velocity in world (NED) X axis</p></li>
+<li><p><strong>vy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – desired velocity in world (NED) Y axis</p></li>
+<li><p><strong>vz</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – desired velocity in world (NED) Z axis</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>drivetrain</strong> (<a class="reference internal" href="../index.html#id792" title="airsimdroneracinglab.DrivetrainType"><em>DrivetrainType</em></a><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>yaw_mode</strong> (<a class="reference internal" href="../index.html#id883" title="airsimdroneracinglab.YawMode"><em>YawMode</em></a><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByVelocityZAsync">
+<code class="sig-name descname">moveByVelocityZAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vx</span></em>, <em class="sig-param"><span class="n">vy</span></em>, <em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">drivetrain</span><span class="o">=</span><span class="default_value">DrivetrainType.MaxDegreeOfFreedom</span></em>, <em class="sig-param"><span class="n">yaw_mode</span><span class="o">=</span><span class="default_value">YawMode()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByVelocityZAsync" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – desired velocity in world (NED) X axis</p></li>
+<li><p><strong>vy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – desired velocity in world (NED) Y axis</p></li>
+<li><p><strong>z</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – desired altitude in world (NED) Z axis</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>drivetrain</strong> (<a class="reference internal" href="../index.html#id792" title="airsimdroneracinglab.DrivetrainType"><em>DrivetrainType</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>yaw_mode</strong> (<a class="reference internal" href="../index.html#id883" title="airsimdroneracinglab.YawMode"><em>YawMode</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveOnPathAsync">
+<code class="sig-name descname">moveOnPathAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">velocity</span></em>, <em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">3e+38</span></em>, <em class="sig-param"><span class="n">drivetrain</span><span class="o">=</span><span class="default_value">DrivetrainType.MaxDegreeOfFreedom</span></em>, <em class="sig-param"><span class="n">yaw_mode</span><span class="o">=</span><span class="default_value">YawMode()</span></em>, <em class="sig-param"><span class="n">lookahead</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">adaptive_lookahead</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveOnPathAsync" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>TYPE</em>) – Description</p></li>
+<li><p><strong>velocity</strong> (<em>TYPE</em>) – Description</p></li>
+<li><p><strong>timeout_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>drivetrain</strong> (<em>TYPE</em><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>yaw_mode</strong> (<em>TYPE</em><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>lookahead</strong> (<em>TYPE</em><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>adaptive_lookahead</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Description</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveToPositionAsync">
+<code class="sig-name descname">moveToPositionAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">velocity</span></em>, <em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">3e+38</span></em>, <em class="sig-param"><span class="n">drivetrain</span><span class="o">=</span><span class="default_value">DrivetrainType.MaxDegreeOfFreedom</span></em>, <em class="sig-param"><span class="n">yaw_mode</span><span class="o">=</span><span class="default_value">YawMode()</span></em>, <em class="sig-param"><span class="n">lookahead</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">adaptive_lookahead</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveToPositionAsync" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Description</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Description</p></li>
+<li><p><strong>z</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Description</p></li>
+<li><p><strong>velocity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Description</p></li>
+<li><p><strong>timeout_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>drivetrain</strong> (<a class="reference internal" href="../index.html#id792" title="airsimdroneracinglab.DrivetrainType"><em>DrivetrainType</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>yaw_mode</strong> (<a class="reference internal" href="../index.html#id883" title="airsimdroneracinglab.YawMode"><em>YawMode</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>lookahead</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>adaptive_lookahead</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveToZAsync">
+<code class="sig-name descname">moveToZAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">velocity</span></em>, <em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">3e+38</span></em>, <em class="sig-param"><span class="n">yaw_mode</span><span class="o">=</span><span class="default_value">YawMode()</span></em>, <em class="sig-param"><span class="n">lookahead</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">adaptive_lookahead</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveToZAsync" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Description</p></li>
+<li><p><strong>velocity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Description</p></li>
+<li><p><strong>timeout_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>yaw_mode</strong> (<a class="reference internal" href="../index.html#id883" title="airsimdroneracinglab.YawMode"><em>YawMode</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>lookahead</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>adaptive_lookahead</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveToYawAsync">
+<code class="sig-name descname">moveToYawAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">yaw</span></em>, <em class="sig-param"><span class="n">timeout_sec</span><span class="o">=</span><span class="default_value">3e+38</span></em>, <em class="sig-param"><span class="n">margin</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveToYawAsync" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>yaw_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired yaw angle, in <strong>degrees per second</strong>.</p></li>
+<li><p><strong>timeout_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>margin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Description</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByYawRateAsync">
+<code class="sig-name descname">moveByYawRateAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">yaw_rate</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByYawRateAsync" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>yaw_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired yaw rate, in <strong>degrees per second</strong>.</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Description</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveOnSplineAsync">
+<code class="sig-name descname">moveOnSplineAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">waypoints</span></em>, <em class="sig-param"><span class="n">vel_max</span><span class="o">=</span><span class="default_value">15.0</span></em>, <em class="sig-param"><span class="n">acc_max</span><span class="o">=</span><span class="default_value">7.5</span></em>, <em class="sig-param"><span class="n">add_position_constraint</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">add_velocity_constraint</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">add_acceleration_constraint</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">viz_traj</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">viz_traj_color_rgba</span><span class="o">=</span><span class="default_value">[1.0, 0.0, 0.0, 1.0]</span></em>, <em class="sig-param"><span class="n">replan_from_lookahead</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">replan_lookahead_sec</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveOnSplineAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Fits a minimum jerk trajectory to the list of given 3D waypoints (specified by the waypoints parameter).</p></li>
+<li><p>Uses ETHZ-ASL’s <a class="reference external" href="https://github.com/ethz-asl/mav_trajectory_generation">mav_trajectory_generation</a> as the trajectory planning backend.</p></li>
+<li><p>Tracks the references positions and velocities using a pure pursuit tracking controller.</p></li>
+<li><p>The gains of the pure pursuit tracking controller are set by setTrajectoryTrackerGains.</p></li>
+<li><p>Reference yaws are allocated along the tangent of the trajectory. Hence the drone will always look at the direction along which it is flying, behaving like a 3D car.</p></li>
+<li><p>Note: setTrajectoryTrackerGains() must be called once before calling moveOnSpline()</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>waypoints</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – <ul>
+<li><p>List of 3D waypoints, defined in local NED frame of the vehicle to track.</p></li>
+</ul>
+</p></li>
+<li><p><strong>vel_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Maximum magnitude of velocity along trajectory</p></li>
+</ul>
+</p></li>
+<li><p><strong>acc_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Maximum magnitude of acceleration along trajectory</p></li>
+</ul>
+</p></li>
+<li><p><strong>add_position_constraint</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Add a start constraint at current position, so that the planned trajectory is smooth if the drone is already moving.</p></li>
+<li><p>If replan_from_lookahead is False, and add_position_constraint is False, trajectory starts from the first element of the “waypoints” list param.</p></li>
+<li><p>If replan_from_lookahead is False, and add_position_constraint is True, a position constraint is added at current odometry, and so the trajectory starts from current position.</p></li>
+<li><p>If replan_from_lookahead is True, a position constraint trajectory is always added at look-ahead point regardless of the value of “add_position_constraint”, and so the trajectory starts from the lookahead point.</p></li>
+<li><p>See below for the definition of “look-ahead point”.</p></li>
+</ul>
+</p></li>
+<li><p><strong>add_velocity_constraint</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Should only be set to True if add_position_constraint is True.</p></li>
+<li><p>If replan_from_lookahead is True, a velocity constraint is added at current odometry.</p></li>
+<li><p>If replan_from_lookahead is True, a velocity constraint is added at lookahead point.</p></li>
+</ul>
+</p></li>
+<li><p><strong>add_acceleration_constraint</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Should only be set to True if add_velocity_constraint (and therefore, add_position_constraint) is True.</p></li>
+<li><p>If replan_from_lookahead is True, an acceleration constraint is added at current odometry.</p></li>
+<li><p>If replan_from_lookahead is True, an acceleration constraint is added at lookahead point.</p></li>
+</ul>
+</p></li>
+<li><p><strong>viz_traj</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>set this to True to visualize trajectory in unreal window.</p></li>
+<li><p>Note that visualization would appear in the FPV image, so this should only be used for debugging.</p></li>
+</ul>
+</p></li>
+<li><p><strong>viz_traj_color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>list of 4 floats from 0.0 to 1.0 that determines RGBA value of trajectory visualization.</p></li>
+<li><p>Example: viz_traj_color_rgba=[1.0, 0.0, 0.0, 1.0] corresponds to Red</p></li>
+</ul>
+</p></li>
+<li><p><strong>replan_from_lookahead</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>If this is set to true, the trajectory will start from the “look-ahead point” associated with the trajectory the drone is currently following.</p></li>
+<li><p>The lookahead point is defined by the value of the replan_lookahead_sec paramater sent in the <em>previous</em> call to moveOnSpline.</p></li>
+</ul>
+</p></li>
+<li><p><strong>replan_lookahead_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Defines the lookahead point by sampling the current trajectory replan_lookahead_sec number of seconds ahead.</p></li>
+<li><p>If replan_from_lookahead is passed as True in the <em>next</em> call to moveOnSpline, the <em>next</em> call’s trajectory will start from the lookahead point defined by the <em>current</em> call’s replan_lookahead_sec</p></li>
+</ul>
+</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Name of the multirotor to send this command to</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveOnSplineVelConstraintsAsync">
+<code class="sig-name descname">moveOnSplineVelConstraintsAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">waypoints</span></em>, <em class="sig-param"><span class="n">velocity_constraints</span></em>, <em class="sig-param"><span class="n">vel_max</span><span class="o">=</span><span class="default_value">15.0</span></em>, <em class="sig-param"><span class="n">acc_max</span><span class="o">=</span><span class="default_value">7.5</span></em>, <em class="sig-param"><span class="n">add_position_constraint</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">add_velocity_constraint</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">add_acceleration_constraint</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">viz_traj</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">viz_traj_color_rgba</span><span class="o">=</span><span class="default_value">[1.0, 0.0, 0.0, 0.4]</span></em>, <em class="sig-param"><span class="n">replan_from_lookahead</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">replan_lookahead_sec</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveOnSplineVelConstraintsAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Fits a minimum jerk trajectory to the list of given 3D waypoints (specified by the waypoints parameter).</p></li>
+<li><p>Also adds corresponding 3D velocity vector constraints (specified by the velocity_constraints parameter).</p></li>
+<li><p>Uses ETHZ-ASL’s <a class="reference external" href="https://github.com/ethz-asl/mav_trajectory_generation">mav_trajectory_generation</a> as the trajectory planning backend.</p></li>
+<li><p>Tracks the references positions and velocities using a pure pursuit tracking controller.</p></li>
+<li><p>The gains of the pure pursuit tracking controller are set by setTrajectoryTrackerGains.</p></li>
+<li><p>Reference yaws are allocated along the tangent of the trajectory. Hence the drone will always look at the direction along which it is flying, behaving like a 3D car.</p></li>
+<li><p>Reference yaws are allocated along the tangent of the trajectory.</p></li>
+<li><p>Note: setTrajectoryTrackerGains() must be called once before calling moveOnSpline()</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>waypoints</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – <ul>
+<li><p>List of 3D waypoints, defined in local NED frame of the vehicle to track.</p></li>
+</ul>
+</p></li>
+<li><p><strong>velocity_constraints</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference internal" href="../index.html#id812" title="airsimdroneracinglab.Vector3r"><em>Vector3r</em></a><em>]</em>) – <ul>
+<li><p>List of 3D velocity vector constraints, defined in local NED frame of the vehicle to track.</p></li>
+</ul>
+</p></li>
+<li><p><strong>vel_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Maximum magnitude of velocity along trajectory</p></li>
+</ul>
+</p></li>
+<li><p><strong>acc_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>Maximum magnitude of acceleration along trajectory</strong> (<em>-</em>) – </p></li>
+<li><p><strong>add_position_constraint</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Add a start constraint at current position, so that the planned trajectory is smooth if the drone is already moving.</p></li>
+<li><p>If replan_from_lookahead is False, and add_position_constraint is False, trajectory starts from the first element of the “waypoints” list param.</p></li>
+<li><p>If replan_from_lookahead is False, and add_position_constraint is True, a position constraint is added at current odometry, and so the trajectory starts from current position.</p></li>
+<li><p>If replan_from_lookahead is True, a position constraint trajectory is always added at look-ahead point regardless of the value of “add_position_constraint”, and so the trajectory starts from the lookahead point.</p></li>
+<li><p>See below for the definition of “look-ahead point”.</p></li>
+</ul>
+</p></li>
+<li><p><strong>add_velocity_constraint</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Should only be set to True if add_position_constraint is True.</p></li>
+<li><p>If replan_from_lookahead is True, a velocity constraint is added at current odometry.</p></li>
+<li><p>If replan_from_lookahead is True, a velocity constraint is added at lookahead point.</p></li>
+</ul>
+</p></li>
+<li><p><strong>add_acceleration_constraint</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Should only be set to True if add_velocity_constraint (and therefore, add_position_constraint) is True.</p></li>
+<li><p>If replan_from_lookahead is True, an acceleration constraint is added at current odometry.</p></li>
+<li><p>If replan_from_lookahead is True, an acceleration constraint is added at lookahead point.</p></li>
+</ul>
+</p></li>
+<li><p><strong>viz_traj</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>set this to True to visualize trajectory in unreal window.</p></li>
+<li><p>Note that visualization would appear in the FPV image, so this should only be used for debugging.</p></li>
+</ul>
+</p></li>
+<li><p><strong>viz_traj_color_rgba</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>list of 4 floats from 0.0 to 1.0 that determines RGBA value of trajectory visualization.</p></li>
+<li><p>Example: viz_traj_color_rgba=[1.0, 0.0, 0.0, 1.0] corresponds to Red</p></li>
+</ul>
+</p></li>
+<li><p><strong>replan_from_lookahead</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>If this is set to true, the trajectory will start from the “look-ahead point” associated with the trajectory the drone is currently following.</p></li>
+<li><p>The lookahead point is defined by the value of the replan_lookahead_sec paramater sent in the <em>previous</em> call to moveOnSpline.</p></li>
+</ul>
+</p></li>
+<li><p><strong>replan_lookahead_sec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Defines the lookahead point by sampling the current trajectory replan_lookahead_sec number of seconds ahead.</p></li>
+<li><p>If replan_from_lookahead is passed as True in the <em>next</em> call to moveOnSpline, the <em>next</em> call’s trajectory will start from the lookahead point defined by the <em>current</em> call’s replan_lookahead_sec</p></li>
+</ul>
+</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p>Name of the multirotor to send this command to</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.clearTrajectory">
+<code class="sig-name descname">clearTrajectory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.clearTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears, and stops following the current trajectory (see moveOnSpline() or moveOnSplineVelConstraintsAsyn,c if any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Description</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.setTrajectoryTrackerGains">
+<code class="sig-name descname">setTrajectoryTrackerGains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">gains</span><span class="o">=</span><span class="default_value">TrajectoryTrackerGains()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.setTrajectoryTrackerGains" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Sets trajectory tracker gains for moveOnSplineAsync, moveOnSplineVelConstraintsAsync.</p></li>
+<li><p>Must be called once before either of the moveOnSpline*() APIs is called</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gains</strong> (<a class="reference internal" href="../index.html#id1065" title="airsimdroneracinglab.TrajectoryTrackerGains"><em>TrajectoryTrackerGains</em></a>) – Pass TrajectoryTrackerGains() to set default values. Look at TrajectoryTrackerGains to set custom gains</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByManualAsync">
+<code class="sig-name descname">moveByManualAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vx_max</span></em>, <em class="sig-param"><span class="n">vy_max</span></em>, <em class="sig-param"><span class="n">z_min</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">drivetrain</span><span class="o">=</span><span class="default_value">DrivetrainType.MaxDegreeOfFreedom</span></em>, <em class="sig-param"><span class="n">yaw_mode</span><span class="o">=</span><span class="default_value">YawMode()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByManualAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Read current RC state and use it to control the vehicles.</p></li>
+</ul>
+<p>Parameters sets up the constraints on velocity and minimum altitude while flying. If RC state is detected to violate these constraints
+then that RC state would be ignored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vx_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – max velocity allowed in x direction</p></li>
+<li><p><strong>vy_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – max velocity allowed in y direction</p></li>
+<li><p><strong>vz_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – max velocity allowed in z direction</p></li>
+<li><p><strong>z_min</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – min z allowed for vehicle position</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – after this duration vehicle would switch back to non-manual mode</p></li>
+<li><p><strong>drivetrain</strong> (<a class="reference internal" href="../index.html#id792" title="airsimdroneracinglab.DrivetrainType"><em>DrivetrainType</em></a>) – when ForwardOnly, vehicle rotates itself so that its front is always facing the direction of travel. If MaxDegreeOfFreedom then it doesn’t do that (crab-like movement)</p></li>
+<li><p><strong>yaw_mode</strong> (<a class="reference internal" href="../index.html#id883" title="airsimdroneracinglab.YawMode"><em>YawMode</em></a>) – Specifies if vehicle should face at given angle (is_rate=False) or should be rotating around its axis at given rate (is_rate=True)</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.hoverAsync">
+<code class="sig-name descname">hoverAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.hoverAsync" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByRC">
+<code class="sig-name descname">moveByRC</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">rcdata</span><span class="o">=</span><span class="default_value">RCData()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByRC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByMotorPWMsAsync">
+<code class="sig-name descname">moveByMotorPWMsAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">front_right_pwm</span></em>, <em class="sig-param"><span class="n">rear_left_pwm</span></em>, <em class="sig-param"><span class="n">front_left_pwm</span></em>, <em class="sig-param"><span class="n">rear_right_pwm</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByMotorPWMsAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Directly control the motors using PWM values</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>front_right_pwm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – PWM value for the front right motor (between 0.0 to 1.0)</p></li>
+<li><p><strong>rear_left_pwm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – PWM value for the rear left motor (between 0.0 to 1.0)</p></li>
+<li><p><strong>front_left_pwm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – PWM value for the front left motor (between 0.0 to 1.0)</p></li>
+<li><p><strong>rear_right_pwm</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – PWM value for the rear right motor (between 0.0 to 1.0)</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByRollPitchYawZAsync">
+<code class="sig-name descname">moveByRollPitchYawZAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">roll</span></em>, <em class="sig-param"><span class="n">pitch</span></em>, <em class="sig-param"><span class="n">yaw</span></em>, <em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByRollPitchYawZAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul>
+<li><p>z is given in local NED frame of the vehicle.</p></li>
+<li><p>Roll angle, pitch angle, and yaw angle set points are given in <strong>radians</strong>, in the body frame.</p></li>
+<li><p>The body frame follows the Front Left Up (FLU) convention, and right-handedness.</p></li>
+<li><dl>
+<dt>Frame Convention:</dt><dd><ul class="simple">
+<li><p>X axis is along the <strong>Front</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>roll</strong> angle.</div>
+<div class="line">Hence, rolling with a positive angle is equivalent to translating in the <strong>right</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Y axis is along the <strong>Left</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>pitch</strong> angle.</div>
+<div class="line">Hence, pitching with a positive angle is equivalent to translating in the <strong>front</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Z axis is along the <strong>Up</strong> direction.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>yaw</strong> angle.</div>
+<div class="line">Hence, yawing with a positive angle is equivalent to rotated towards the <strong>left</strong> direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>roll</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired roll angle, in radians.</p></li>
+<li><p><strong>pitch</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired pitch angle, in radians.</p></li>
+<li><p><strong>yaw</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired yaw angle, in radians.</p></li>
+<li><p><strong>z</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired Z value (in local NED frame of the vehicle)</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByRollPitchYawThrottleAsync">
+<code class="sig-name descname">moveByRollPitchYawThrottleAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">roll</span></em>, <em class="sig-param"><span class="n">pitch</span></em>, <em class="sig-param"><span class="n">yaw</span></em>, <em class="sig-param"><span class="n">throttle</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByRollPitchYawThrottleAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul>
+<li><p>Desired throttle is between 0.0 to 1.0</p></li>
+<li><p>Roll angle, pitch angle, and yaw angle are given in <strong>radians</strong>, in the body frame.</p></li>
+<li><p>The body frame follows the Front Left Up (FLU) convention, and right-handedness.</p></li>
+<li><dl>
+<dt>Frame Convention:</dt><dd><ul class="simple">
+<li><p>X axis is along the <strong>Front</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>roll</strong> angle.</div>
+<div class="line">Hence, rolling with a positive angle is equivalent to translating in the <strong>right</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Y axis is along the <strong>Left</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>pitch</strong> angle.</div>
+<div class="line">Hence, pitching with a positive angle is equivalent to translating in the <strong>front</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Z axis is along the <strong>Up</strong> direction.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>yaw</strong> angle.</div>
+<div class="line">Hence, yawing with a positive angle is equivalent to rotated towards the <strong>left</strong> direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>roll</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired roll angle, in radians.</p></li>
+<li><p><strong>pitch</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired pitch angle, in radians.</p></li>
+<li><p><strong>yaw</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired yaw angle, in radians.</p></li>
+<li><p><strong>throttle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired throttle (between 0.0 to 1.0)</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByRollPitchYawrateThrottleAsync">
+<code class="sig-name descname">moveByRollPitchYawrateThrottleAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">roll</span></em>, <em class="sig-param"><span class="n">pitch</span></em>, <em class="sig-param"><span class="n">yaw_rate</span></em>, <em class="sig-param"><span class="n">throttle</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByRollPitchYawrateThrottleAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul>
+<li><p>Desired throttle is between 0.0 to 1.0</p></li>
+<li><p>Roll angle, pitch angle, and yaw rate set points are given in <strong>radians</strong>, in the body frame.</p></li>
+<li><p>The body frame follows the Front Left Up (FLU) convention, and right-handedness.</p></li>
+<li><dl>
+<dt>Frame Convention:</dt><dd><ul class="simple">
+<li><p>X axis is along the <strong>Front</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>roll</strong> angle.</div>
+<div class="line">Hence, rolling with a positive angle is equivalent to translating in the <strong>right</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Y axis is along the <strong>Left</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>pitch</strong> angle.</div>
+<div class="line">Hence, pitching with a positive angle is equivalent to translating in the <strong>front</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Z axis is along the <strong>Up</strong> direction.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>yaw</strong> angle.</div>
+<div class="line">Hence, yawing with a positive angle is equivalent to rotated towards the <strong>left</strong> direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>roll</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired roll angle, in radians.</p></li>
+<li><p><strong>pitch</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired pitch angle, in radians.</p></li>
+<li><p><strong>yaw_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired yaw rate, in radian per second.</p></li>
+<li><p><strong>throttle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired throttle (between 0.0 to 1.0)</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByRollPitchYawrateZAsync">
+<code class="sig-name descname">moveByRollPitchYawrateZAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">roll</span></em>, <em class="sig-param"><span class="n">pitch</span></em>, <em class="sig-param"><span class="n">yaw_rate</span></em>, <em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByRollPitchYawrateZAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul>
+<li><p>z is given in local NED frame of the vehicle.</p></li>
+<li><p>Roll angle, pitch angle, and yaw rate set points are given in <strong>radians</strong>, in the body frame.</p></li>
+<li><p>The body frame follows the Front Left Up (FLU) convention, and right-handedness.</p></li>
+<li><dl>
+<dt>Frame Convention:</dt><dd><ul class="simple">
+<li><p>X axis is along the <strong>Front</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>roll</strong> angle.</div>
+<div class="line">Hence, rolling with a positive angle is equivalent to translating in the <strong>right</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Y axis is along the <strong>Left</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>pitch</strong> angle.</div>
+<div class="line">Hence, pitching with a positive angle is equivalent to translating in the <strong>front</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Z axis is along the <strong>Up</strong> direction.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>yaw</strong> angle.</div>
+<div class="line">Hence, yawing with a positive angle is equivalent to rotated towards the <strong>left</strong> direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>roll</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired roll angle, in radians.</p></li>
+<li><p><strong>pitch</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired pitch angle, in radians.</p></li>
+<li><p><strong>yaw_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired yaw rate, in radian per second.</p></li>
+<li><p><strong>z</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired Z value (in local NED frame of the vehicle)</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByAngleRatesZAsync">
+<code class="sig-name descname">moveByAngleRatesZAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">roll_rate</span></em>, <em class="sig-param"><span class="n">pitch_rate</span></em>, <em class="sig-param"><span class="n">yaw_rate</span></em>, <em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByAngleRatesZAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul>
+<li><p>z is given in local NED frame of the vehicle.</p></li>
+<li><p>Roll rate, pitch rate, and yaw rate set points are given in <strong>radians</strong>, in the body frame.</p></li>
+<li><p>The body frame follows the Front Left Up (FLU) convention, and right-handedness.</p></li>
+<li><dl>
+<dt>Frame Convention:</dt><dd><ul class="simple">
+<li><p>X axis is along the <strong>Front</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>roll</strong> angle.</div>
+<div class="line">Hence, rolling with a positive angle is equivalent to translating in the <strong>right</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Y axis is along the <strong>Left</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>pitch</strong> angle.</div>
+<div class="line">Hence, pitching with a positive angle is equivalent to translating in the <strong>front</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Z axis is along the <strong>Up</strong> direction.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>yaw</strong> angle.</div>
+<div class="line">Hence, yawing with a positive angle is equivalent to rotated towards the <strong>left</strong> direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>roll_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired roll rate, in radians / second</p></li>
+<li><p><strong>pitch_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired pitch rate, in radians / second</p></li>
+<li><p><strong>yaw_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired yaw rate, in radians / second</p></li>
+<li><p><strong>z</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired Z value (in local NED frame of the vehicle)</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.moveByAngleRatesThrottleAsync">
+<code class="sig-name descname">moveByAngleRatesThrottleAsync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">roll_rate</span></em>, <em class="sig-param"><span class="n">pitch_rate</span></em>, <em class="sig-param"><span class="n">yaw_rate</span></em>, <em class="sig-param"><span class="n">throttle</span></em>, <em class="sig-param"><span class="n">duration</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.moveByAngleRatesThrottleAsync" title="Permalink to this definition">¶</a></dt>
+<dd><ul>
+<li><p>Desired throttle is between 0.0 to 1.0</p></li>
+<li><p>Roll rate, pitch rate, and yaw rate set points are given in <strong>radians</strong>, in the body frame.</p></li>
+<li><p>The body frame follows the Front Left Up (FLU) convention, and right-handedness.</p></li>
+<li><dl>
+<dt>Frame Convention:</dt><dd><ul class="simple">
+<li><p>X axis is along the <strong>Front</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>roll</strong> angle.</div>
+<div class="line">Hence, rolling with a positive angle is equivalent to translating in the <strong>right</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Y axis is along the <strong>Left</strong> direction of the quadrotor.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>pitch</strong> angle.</div>
+<div class="line">Hence, pitching with a positive angle is equivalent to translating in the <strong>front</strong> direction, w.r.t. our FLU body frame.</div>
+</div>
+<ul class="simple">
+<li><p>Z axis is along the <strong>Up</strong> direction.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Clockwise rotation about this axis defines a positive <strong>yaw</strong> angle.</div>
+<div class="line">Hence, yawing with a positive angle is equivalent to rotated towards the <strong>left</strong> direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.</div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>roll_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired roll rate, in radians / second</p></li>
+<li><p><strong>pitch_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired pitch rate, in radians / second</p></li>
+<li><p><strong>yaw_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired yaw rate, in radians / second</p></li>
+<li><p><strong>throttle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired throttle (between 0.0 to 1.0)</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Desired amount of time (seconds), to send this command for</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>future. call .join() to wait for method to finish. Example: client.METHOD().join()</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>msgpackrpc.future.Future</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.setAngleRateControllerGains">
+<code class="sig-name descname">setAngleRateControllerGains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">angle_rate_gains</span><span class="o">=</span><span class="default_value">AngleRateControllerGains()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.setAngleRateControllerGains" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><dl class="simple">
+<dt>Modifying these gains will have an affect on <em>ALL</em> move*() APIs.</dt><dd><p>This is because any velocity setpoint is converted to an angle level setpoint which is tracked with an angle level controllers.
+That angle level setpoint is itself tracked with and angle rate controller.</p>
+</dd>
+</dl>
+</li>
+<li><p>This function should only be called if the default angle rate control PID gains need to be modified.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle_rate_gains</strong> (<a class="reference internal" href="../index.html#id1045" title="airsimdroneracinglab.AngleRateControllerGains"><em>AngleRateControllerGains</em></a>) – <ul>
+<li><p>Correspond to the roll, pitch, yaw axes, defined in the body frame.</p></li>
+<li><p>Pass AngleRateControllerGains() to reset gains to default recommended values.</p></li>
+</ul>
+</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.setAngleLevelControllerGains">
+<code class="sig-name descname">setAngleLevelControllerGains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">angle_level_gains</span><span class="o">=</span><span class="default_value">AngleLevelControllerGains()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.setAngleLevelControllerGains" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Sets angle level controller gains (used by any API setting angle references - for ex: moveByRollPitchYawZAsync(), moveByRollPitchYawThrottleAsync(), etc)</p></li>
+<li><dl class="simple">
+<dt>Modifying these gains will also affect the behaviour of moveByVelocityAsync() API.</dt><dd><p>This is because the AirSim flight controller will track velocity setpoints by converting them to angle set points.</p>
+</dd>
+</dl>
+</li>
+<li><p>This function should only be called if the default angle level control PID gains need to be modified.</p></li>
+<li><p>Passing AngleLevelControllerGains() sets gains to default airsim values.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle_level_gains</strong> (<a class="reference internal" href="../index.html#id1050" title="airsimdroneracinglab.AngleLevelControllerGains"><em>AngleLevelControllerGains</em></a>) – <ul>
+<li><p>Correspond to the roll, pitch, yaw axes, defined in the body frame.</p></li>
+<li><p>Pass AngleLevelControllerGains() to reset gains to default recommended values.</p></li>
+</ul>
+</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.setVelocityControllerGains">
+<code class="sig-name descname">setVelocityControllerGains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">velocity_gains</span><span class="o">=</span><span class="default_value">VelocityControllerGains()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.setVelocityControllerGains" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>Sets velocity controller gains for moveByVelocityAsync().</p></li>
+<li><p>This function should only be called if the default velocity control PID gains need to be modified.</p></li>
+<li><p>Passing VelocityControllerGains() sets gains to default airsim values.</p></li>
+<li><dl class="simple">
+<dt>Modifying the velocity controller gains will have an effect on the trajectory tracking behavior of moveOnSpline*() APIs,</dt><dd><p>as moveOnSpline*() APIs use a controller on the lines of the pure-pursuit approach, which is tracking the reference position and
+velocities of the reference trajectories, while minimizing cross-track errors in both position and velocity state,
+by sending velocity commands (via moveByVelocityAsync()) in the backend.
+If you change this, it might be worth playing with the gains of moveOnSpline() by using setTrajectoryTrackerGains()</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>velocity_gains</strong> (<a class="reference internal" href="../index.html#id1055" title="airsimdroneracinglab.VelocityControllerGains"><em>VelocityControllerGains</em></a>) – <ul>
+<li><p>Correspond to the world X, Y, Z axes.</p></li>
+<li><p>Pass VelocityControllerGains() to reset gains to default recommended values.</p></li>
+<li><p>Modifying velocity controller gains will have an affect on the behaviour of moveOnSplineAsync() and moveOnSplineVelConstraintsAsync(), as they both use velocity control to track the trajectory.</p></li>
+</ul>
+</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.setPositionControllerGains">
+<code class="sig-name descname">setPositionControllerGains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">position_gains</span><span class="o">=</span><span class="default_value">PositionControllerGains()</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.setPositionControllerGains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets position controller gains for moveByPositionAsync.
+This function should only be called if the default position control PID gains need to be modified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position_gains</strong> (<a class="reference internal" href="../index.html#id1060" title="airsimdroneracinglab.PositionControllerGains"><em>PositionControllerGains</em></a>) – <ul>
+<li><p>Correspond to the X, Y, Z axes.</p></li>
+<li><p>Pass PositionControllerGains() to reset gains to default recommended values.</p></li>
+</ul>
+</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Name of the multirotor to send this command to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.getMultirotorState">
+<code class="sig-name descname">getMultirotorState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.getMultirotorState" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Vehicle to get the state of</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../index.html#id977" title="airsimdroneracinglab.MultirotorState">MultirotorState</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.simLogMultirotorState">
+<code class="sig-name descname">simLogMultirotorState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">is_enabled</span></em>, <em class="sig-param"><span class="n">vehicle_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.simLogMultirotorState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts or stops high frequency logging of full multirotor state to a text file in Documents/AirSim.
+Values logged: Position, orientation, linear/angular velocity, linear/angular acceleration,
+body forces and torques, rotor speeds and rotor torques.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_enabled</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>required</em>) – Start/stop.</p></li>
+<li><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><em>optional</em>) – Vehicle to start logging for</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.simStartRace">
+<code class="sig-name descname">simStartRace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">tier</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.simStartRace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts an instance of a race in your given level, if valid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.__internalRandomGoalZone">
+<code class="sig-name descname">__internalRandomGoalZone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">gate_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.__internalRandomGoalZone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.simResetRace">
+<code class="sig-name descname">simResetRace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.simResetRace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets a current race: moves players to start positions, timer and penalties reset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.client.MultirotorClient.simDisableRaceLog">
+<code class="sig-name descname">simDisableRaceLog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.client.MultirotorClient.simDisableRaceLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables race log</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Ratnesh Madaan, Matthew Brown, Nicholas Gyde, Sai Vemprala, Shital Shah
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

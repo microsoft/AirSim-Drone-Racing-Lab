@@ -1,0 +1,1897 @@
+:mod:`airsimdroneracinglab.types`
+=================================
+
+.. py:module:: airsimdroneracinglab.types
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   airsimdroneracinglab.types.MsgpackMixin
+   airsimdroneracinglab.types.ImageType
+   airsimdroneracinglab.types.DrivetrainType
+   airsimdroneracinglab.types.LandedState
+   airsimdroneracinglab.types.WeatherParameter
+   airsimdroneracinglab.types.Vector3r
+   airsimdroneracinglab.types.Quaternionr
+   airsimdroneracinglab.types.Pose
+   airsimdroneracinglab.types.CollisionInfo
+   airsimdroneracinglab.types.GeoPoint
+   airsimdroneracinglab.types.YawMode
+   airsimdroneracinglab.types.RCData
+   airsimdroneracinglab.types.ImageRequest
+   airsimdroneracinglab.types.ImageResponse
+   airsimdroneracinglab.types.CarControls
+   airsimdroneracinglab.types.KinematicsState
+   airsimdroneracinglab.types.EnvironmentState
+   airsimdroneracinglab.types.CarState
+   airsimdroneracinglab.types.MultirotorState
+   airsimdroneracinglab.types.ProjectionMatrix
+   airsimdroneracinglab.types.CameraInfo
+   airsimdroneracinglab.types.LidarData
+   airsimdroneracinglab.types.ImuData
+   airsimdroneracinglab.types.BarometerData
+   airsimdroneracinglab.types.MagnetometerData
+   airsimdroneracinglab.types.GnssFixType
+   airsimdroneracinglab.types.GnssReport
+   airsimdroneracinglab.types.GpsData
+   airsimdroneracinglab.types.DistanceSensorData
+   airsimdroneracinglab.types.PIDGains
+   airsimdroneracinglab.types.AngleRateControllerGains
+   airsimdroneracinglab.types.AngleLevelControllerGains
+   airsimdroneracinglab.types.VelocityControllerGains
+   airsimdroneracinglab.types.PositionControllerGains
+   airsimdroneracinglab.types.TrajectoryTrackerGains
+   airsimdroneracinglab.types.MeshPositionVertexBuffersResponse
+
+
+
+.. py:class:: MsgpackMixin
+
+   
+   .. method:: __repr__(self)
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: to_msgpack(self, *args, **kwargs)
+
+
+      :param \*args: Description
+      :param \*\*kwargs: Description
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: from_msgpack(cls, encoded)
+      :classmethod:
+
+
+      :param encoded: Description
+      :type encoded: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+
+
+.. py:class:: ImageType
+
+   .. attribute:: DepthPerspective
+
+      Description
+
+      :type: int
+
+   .. attribute:: DepthPlanner
+
+      Description
+
+      :type: int
+
+   .. attribute:: DepthVis
+
+      Description
+
+      :type: int
+
+   .. attribute:: DisparityNormalized
+
+      Description
+
+      :type: int
+
+   .. attribute:: Infrared
+
+      Description
+
+      :type: int
+
+   .. attribute:: Scene
+
+      Description
+
+      :type: int
+
+   .. attribute:: Segmentation
+
+      Description
+
+      :type: int
+
+   .. attribute:: SurfaceNormals
+
+      Description
+
+      :type: int
+
+   .. attribute:: Scene
+      :annotation: = 0
+
+      
+
+   .. attribute:: DepthPlanner
+      :annotation: = 1
+
+      
+
+   .. attribute:: DepthPerspective
+      :annotation: = 2
+
+      
+
+   .. attribute:: DepthVis
+      :annotation: = 3
+
+      
+
+   .. attribute:: DisparityNormalized
+      :annotation: = 4
+
+      
+
+   .. attribute:: Segmentation
+      :annotation: = 5
+
+      
+
+   .. attribute:: SurfaceNormals
+      :annotation: = 6
+
+      
+
+   .. attribute:: Infrared
+      :annotation: = 7
+
+      
+
+
+.. py:class:: DrivetrainType
+
+   Type of DrivetrainType
+
+   .. attribute:: ForwardOnly
+
+      Fixes yaw along tangent of velocity vector (atan2(vy, vx))
+
+      :type: int
+
+   .. attribute:: MaxDegreeOfFreedom
+
+      Description
+
+      :type: int
+
+   .. attribute:: MaxDegreeOfFreedom
+      :annotation: = 0
+
+      
+
+   .. attribute:: ForwardOnly
+      :annotation: = 1
+
+      
+
+
+.. py:class:: LandedState
+
+   .. attribute:: Flying
+
+      Description
+
+      :type: int
+
+   .. attribute:: Landed
+
+      Description
+
+      :type: int
+
+   .. attribute:: Landed
+      :annotation: = 0
+
+      
+
+   .. attribute:: Flying
+      :annotation: = 1
+
+      
+
+
+.. py:class:: WeatherParameter
+
+   .. attribute:: Rain
+      :annotation: = 0
+
+      
+
+   .. attribute:: Roadwetness
+      :annotation: = 1
+
+      
+
+   .. attribute:: Snow
+      :annotation: = 2
+
+      
+
+   .. attribute:: RoadSnow
+      :annotation: = 3
+
+      
+
+   .. attribute:: MapleLeaf
+      :annotation: = 4
+
+      
+
+   .. attribute:: RoadLeaf
+      :annotation: = 5
+
+      
+
+   .. attribute:: Dust
+      :annotation: = 6
+
+      
+
+   .. attribute:: Fog
+      :annotation: = 7
+
+      
+
+   .. attribute:: Enabled
+      :annotation: = 8
+
+      
+
+
+.. py:class:: Vector3r(x_val=0.0, y_val=0.0, z_val=0.0)
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: x_val
+
+      Description
+
+      :type: float
+
+   .. attribute:: y_val
+
+      Description
+
+      :type: float
+
+   .. attribute:: z_val
+
+      Description
+
+      :type: float
+
+   .. attribute:: x_val
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: y_val
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: z_val
+      :annotation: = 0.0
+
+      
+
+   .. method:: nanVector3r()
+      :staticmethod:
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: __add__(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: __sub__(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: __truediv__(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: __mul__(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: dot(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: cross(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: get_length(self)
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: distance_to(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: to_Quaternionr(self)
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: to_numpy_array(self)
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+
+.. py:class:: Quaternionr(x_val=0.0, y_val=0.0, z_val=0.0, w_val=1.0)
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: w_val
+
+      Description
+
+      :type: float
+
+   .. attribute:: x_val
+
+      Description
+
+      :type: float
+
+   .. attribute:: y_val
+
+      Description
+
+      :type: float
+
+   .. attribute:: z_val
+
+      Description
+
+      :type: float
+
+   .. attribute:: w_val
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: x_val
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: y_val
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: z_val
+      :annotation: = 0.0
+
+      
+
+   .. method:: nanQuaternionr()
+      :staticmethod:
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: __add__(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: __mul__(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: __truediv__(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: dot(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: cross(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: outer_product(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+
+
+   .. method:: rotate(self, other)
+
+
+      :param other: Description
+      :type other: TYPE
+
+      :returns: Description
+      :rtype: TYPE
+
+      :raises TypeError: Description
+      :raises ValueError: Description
+
+
+   .. method:: conjugate(self)
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: star(self)
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: inverse(self)
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: sgn(self)
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: get_length(self)
+
+
+      :returns: norm of quaternion
+      :rtype: float
+
+
+   .. method:: to_numpy_array(self)
+
+
+      :returns: Description
+      :rtype: np.array
+
+
+
+.. py:class:: Pose(position_val=Vector3r(), orientation_val=Quaternionr())
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: orientation
+
+      Description
+
+      :type: Quaternionr
+
+   .. attribute:: position
+
+      Description
+
+      :type: Vector3r
+
+   .. attribute:: position
+      
+
+      
+
+   .. attribute:: orientation
+      
+
+      
+
+   .. method:: nanPose()
+      :staticmethod:
+
+
+      :returns: Description
+      :rtype: TYPE
+
+
+
+.. py:class:: CollisionInfo
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: has_collided
+
+      Description
+
+      :type: bool
+
+   .. attribute:: impact_point
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: normal
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: object_id
+
+      Description
+
+      :type: int
+
+   .. attribute:: object_name
+
+      Description
+
+      :type: str
+
+   .. attribute:: penetration_depth
+
+      Description
+
+      :type: float
+
+   .. attribute:: position
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: time_stamp
+
+      Description
+
+      :type: float
+
+   .. attribute:: has_collided
+      :annotation: = False
+
+      
+
+   .. attribute:: normal
+      
+
+      
+
+   .. attribute:: impact_point
+      
+
+      
+
+   .. attribute:: position
+      
+
+      
+
+   .. attribute:: penetration_depth
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: time_stamp
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: object_name
+      :annotation: = 
+
+      
+
+   .. attribute:: object_id
+      
+
+      
+
+
+.. py:class:: GeoPoint
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: altitude
+
+      Description
+
+      :type: float
+
+   .. attribute:: latitude
+
+      Description
+
+      :type: float
+
+   .. attribute:: longitude
+
+      Description
+
+      :type: float
+
+   .. attribute:: latitude
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: longitude
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: altitude
+      :annotation: = 0.0
+
+      
+
+
+.. py:class:: YawMode(is_rate=True, yaw_or_rate=0.0)
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   Struct YawMode with two fields, yaw_or_rate and is_rate.
+   If is_rate field is True then yaw_or_rate field is interpreted as angular velocity in **degrees/sec**,
+   which means you want vehicle to rotate continuously around its axis at that angular velocity while moving.
+
+   If is_rate is False then yaw_or_rate is interpreted as angle in **degrees**,
+   which means you want vehicle to rotate to specific angle (i.e. yaw) and keep that angle while moving.
+
+   When yaw_mode.is_rate == true, the drivetrain parameter shouldn't be set to ForwardOnly because there's a contradiction
+   as we're asking for the drone to keep front pointing ahead, but also rotate continuously.
+   However if you have yaw_mode.is_rate = false in ForwardOnly mode then you can do some funky stuff.
+   For example, you can have drone do circles and have yaw_or_rate set to 90 so camera is always pointed to center.
+   In MaxDegreeofFreedom also you can get some funky stuff by setting yaw_mode.is_rate = true and say yaw_mode.yaw_or_rate = 20.
+   This will cause drone to go in its path while rotating which may allow to do 360 scanning.
+
+   In most cases, you just don't want yaw to change which you can do by setting yaw rate of 0.
+   The shorthand for this is airsim.YawMode()
+
+   .. attribute:: is_rate
+
+      if True, yaw_or_rate is interpreted as angular velocity in **degrees/sec**,
+      if False, yaw_or_rate is interpreted as angles in **degrees**,
+
+      :type: bool
+
+   .. attribute:: yaw_or_rate
+
+      value of desired yaw rate, or desired yaw angle. Interpretation depends upon is_rate
+
+      :type: float
+
+   .. attribute:: is_rate
+      :annotation: = True
+
+      
+
+   .. attribute:: yaw_or_rate
+      :annotation: = 0.0
+
+      
+
+
+.. py:class:: RCData(timestamp=0, pitch=0.0, roll=0.0, throttle=0.0, yaw=0.0, switch1=0, switch2=0, switch3=0, switch4=0, switch5=0, switch6=0, switch7=0, switch8=0, is_initialized=False, is_valid=False)
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: is_initialized
+
+      Description
+
+      :type: bool
+
+   .. attribute:: is_valid
+
+      Description
+
+      :type: bool
+
+   .. attribute:: pitch
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: roll
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: switch1
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: switch2
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: switch3
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: switch4
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: switch5
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: switch6
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: switch7
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: switch8
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: throttle
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: timestamp
+
+      Description
+
+      :type: int
+
+   .. attribute:: yaw
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: timestamp
+      :annotation: = 0
+
+      
+
+   .. attribute:: is_initialized
+      :annotation: = False
+
+      
+
+   .. attribute:: is_valid
+      :annotation: = False
+
+      
+
+
+.. py:class:: ImageRequest(camera_name, image_type, pixels_as_float=False, compress=True)
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: camera_name
+
+      Description
+
+      :type: str
+
+   .. attribute:: compress
+
+      Description
+
+      :type: bool
+
+   .. attribute:: image_type
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: pixels_as_float
+
+      Description
+
+      :type: bool
+
+   .. attribute:: camera_name
+      :annotation: = 0
+
+      
+
+   .. attribute:: image_type
+      
+
+      
+
+   .. attribute:: pixels_as_float
+      :annotation: = False
+
+      
+
+   .. attribute:: compress
+      :annotation: = False
+
+      
+
+
+.. py:class:: ImageResponse
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: camera_orientation
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: camera_position
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: compress
+
+      Description
+
+      :type: bool
+
+   .. attribute:: height
+
+      Description
+
+      :type: int
+
+   .. attribute:: image_data_float
+
+      Description
+
+      :type: float
+
+   .. attribute:: image_data_uint8
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: image_type
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: message
+
+      Description
+
+      :type: str
+
+   .. attribute:: pixels_as_float
+
+      Description
+
+      :type: float
+
+   .. attribute:: time_stamp
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: width
+
+      Description
+
+      :type: int
+
+   .. attribute:: image_data_uint8
+      
+
+      
+
+   .. attribute:: image_data_float
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: camera_position
+      
+
+      
+
+   .. attribute:: camera_orientation
+      
+
+      
+
+   .. attribute:: time_stamp
+      
+
+      
+
+   .. attribute:: message
+      :annotation: = 
+
+      
+
+   .. attribute:: pixels_as_float
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: compress
+      :annotation: = True
+
+      
+
+   .. attribute:: width
+      :annotation: = 0
+
+      
+
+   .. attribute:: height
+      :annotation: = 0
+
+      
+
+   .. attribute:: image_type
+      
+
+      
+
+
+.. py:class:: CarControls(throttle=0, steering=0, brake=0, handbrake=False, is_manual_gear=False, manual_gear=0, gear_immediate=True)
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: throttle
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: steering
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: brake
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: handbrake
+      :annotation: = False
+
+      
+
+   .. attribute:: is_manual_gear
+      :annotation: = False
+
+      
+
+   .. attribute:: manual_gear
+      :annotation: = 0
+
+      
+
+   .. attribute:: gear_immediate
+      :annotation: = True
+
+      
+
+   .. method:: set_throttle(self, throttle_val, forward)
+
+
+
+
+.. py:class:: KinematicsState
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: angular_acceleration
+
+      Description
+
+      :type: Vector3r
+
+   .. attribute:: angular_velocity
+
+      Description
+
+      :type: Vector3r
+
+   .. attribute:: linear_acceleration
+
+      Description
+
+      :type: Vector3r
+
+   .. attribute:: linear_velocity
+
+      Description
+
+      :type: Vector3r
+
+   .. attribute:: orientation
+
+      Description
+
+      :type: Quaternionr
+
+   .. attribute:: position
+
+      Description
+
+      :type: Vector3r
+
+   .. attribute:: position
+      
+
+      
+
+   .. attribute:: orientation
+      
+
+      
+
+   .. attribute:: linear_velocity
+      
+
+      
+
+   .. attribute:: angular_velocity
+      
+
+      
+
+   .. attribute:: linear_acceleration
+      
+
+      
+
+   .. attribute:: angular_acceleration
+      
+
+      
+
+
+.. py:class:: EnvironmentState
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: position
+      
+
+      
+
+   .. attribute:: geo_point
+      
+
+      
+
+   .. attribute:: gravity
+      
+
+      
+
+   .. attribute:: air_pressure
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: temperature
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: air_density
+      :annotation: = 0.0
+
+      
+
+
+.. py:class:: CarState
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: speed
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: gear
+      :annotation: = 0
+
+      
+
+   .. attribute:: rpm
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: maxrpm
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: handbrake
+      :annotation: = False
+
+      
+
+   .. attribute:: collision
+      
+
+      
+
+   .. attribute:: kinematics_estimated
+      
+
+      
+
+   .. attribute:: timestamp
+      
+
+      
+
+
+.. py:class:: MultirotorState
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: collision
+
+      Description
+
+      :type: CollisionInfo
+
+   .. attribute:: gps_location
+
+      Description
+
+      :type: GeoPoint
+
+   .. attribute:: kinematics_estimated
+
+      Description
+
+      :type: KinematicsState
+
+   .. attribute:: landed_state
+
+      Description
+
+      :type: LandedState.Landed
+
+   .. attribute:: rc_data
+
+      Description
+
+      :type: RCData
+
+   .. attribute:: timestamp
+
+      Description
+
+      :type: np.uint64
+
+   .. attribute:: collision
+      
+
+      
+
+   .. attribute:: kinematics_estimated
+      
+
+      
+
+   .. attribute:: gps_location
+      
+
+      
+
+   .. attribute:: timestamp
+      
+
+      
+
+   .. attribute:: landed_state
+      
+
+      
+
+   .. attribute:: rc_data
+      
+
+      
+
+
+.. py:class:: ProjectionMatrix
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: matrix
+
+   Description
+
+   :type: list
+
+   .. attribute:: matrix
+      :annotation: = []
+
+      
+
+
+.. py:class:: CameraInfo
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   .. attribute:: fov
+
+      Description
+
+      :type: int
+
+   .. attribute:: pose
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: proj_mat
+
+      Description
+
+      :type: TYPE
+
+   .. attribute:: pose
+      
+
+      
+
+   .. attribute:: fov
+      
+
+      
+
+   .. attribute:: proj_mat
+      
+
+      
+
+
+.. py:class:: LidarData
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: point_cloud
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: time_stamp
+      
+
+      
+
+   .. attribute:: pose
+      
+
+      
+
+
+.. py:class:: ImuData
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: time_stamp
+      
+
+      
+
+   .. attribute:: orientation
+      
+
+      
+
+   .. attribute:: angular_velocity
+      
+
+      
+
+   .. attribute:: linear_acceleration
+      
+
+      
+
+
+.. py:class:: BarometerData
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: time_stamp
+      
+
+      
+
+   .. attribute:: altitude
+      
+
+      
+
+   .. attribute:: pressure
+      
+
+      
+
+   .. attribute:: qnh
+      
+
+      
+
+
+.. py:class:: MagnetometerData
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: time_stamp
+      
+
+      
+
+   .. attribute:: magnetic_field_body
+      
+
+      
+
+   .. attribute:: magnetic_field_covariance
+      :annotation: = 0.0
+
+      
+
+
+.. py:class:: GnssFixType
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: GNSS_FIX_NO_FIX
+      :annotation: = 0
+
+      
+
+   .. attribute:: GNSS_FIX_TIME_ONLY
+      :annotation: = 1
+
+      
+
+   .. attribute:: GNSS_FIX_2D_FIX
+      :annotation: = 2
+
+      
+
+   .. attribute:: GNSS_FIX_3D_FIX
+      :annotation: = 3
+
+      
+
+
+.. py:class:: GnssReport
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: geo_point
+      
+
+      
+
+   .. attribute:: eph
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: epv
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: velocity
+      
+
+      
+
+   .. attribute:: fix_type
+      
+
+      
+
+   .. attribute:: time_utc
+      
+
+      
+
+
+.. py:class:: GpsData
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: time_stamp
+      
+
+      
+
+   .. attribute:: gnss
+      
+
+      
+
+   .. attribute:: is_valid
+      :annotation: = False
+
+      
+
+
+.. py:class:: DistanceSensorData
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: time_stamp
+      
+
+      
+
+   .. attribute:: distance
+      
+
+      
+
+   .. attribute:: min_distance
+      
+
+      
+
+   .. attribute:: max_distance
+      
+
+      
+
+   .. attribute:: relative_pose
+      
+
+      
+
+
+.. py:class:: PIDGains(kp, ki, kd)
+
+   Struct to store values of PID gains. Used to transmit controller gain values while instantiating
+   AngleLevel/AngleRate/Velocity/PositionControllerGains objects.
+
+   .. attribute:: kP
+
+      Proportional gain
+
+      :type: float
+
+   .. attribute:: kI
+
+      Integrator gain
+
+      :type: float
+
+   .. attribute:: kD
+
+      Derivative gain
+
+      :type: float
+
+   .. method:: to_list(self)
+
+
+
+
+.. py:class:: AngleRateControllerGains(roll_gains=PIDGains(0.25, 0, 0), pitch_gains=PIDGains(0.25, 0, 0), yaw_gains=PIDGains(0.25, 0, 0))
+
+   Struct to contain controller gains used by angle level PID controller
+
+   .. attribute:: roll_gains
+
+      kP, kI, kD for roll axis
+
+      :type: PIDGains
+
+   .. attribute:: pitch_gains
+
+      kP, kI, kD for pitch axis
+
+      :type: PIDGains
+
+   .. attribute:: yaw_gains
+
+      kP, kI, kD for yaw axis
+
+      :type: PIDGains
+
+   .. method:: to_lists(self)
+
+
+
+
+.. py:class:: AngleLevelControllerGains(roll_gains=PIDGains(2.5, 0, 0), pitch_gains=PIDGains(2.5, 0, 0), yaw_gains=PIDGains(2.5, 0, 0))
+
+   Struct to contain controller gains used by angle rate PID controller
+
+   .. attribute:: roll_gains
+
+      kP, kI, kD for roll axis
+
+      :type: PIDGains
+
+   .. attribute:: pitch_gains
+
+      kP, kI, kD for pitch axis
+
+      :type: PIDGains
+
+   .. attribute:: yaw_gains
+
+      kP, kI, kD for yaw axis
+
+      :type: PIDGains
+
+   .. method:: to_lists(self)
+
+
+
+
+.. py:class:: VelocityControllerGains(x_gains=PIDGains(0.2, 0, 0), y_gains=PIDGains(0.2, 0, 0), z_gains=PIDGains(2.0, 2.0, 0))
+
+   Struct to contain controller gains used by velocity PID controller
+
+   .. attribute:: x_gains
+
+      kP, kI, kD for X axis
+
+      :type: PIDGains
+
+   .. attribute:: y_gains
+
+      kP, kI, kD for Y axis
+
+      :type: PIDGains
+
+   .. attribute:: z_gains
+
+      kP, kI, kD for Z axis
+
+      :type: PIDGains
+
+   .. method:: to_lists(self)
+
+
+
+
+.. py:class:: PositionControllerGains(x_gains=PIDGains(0.25, 0, 0), y_gains=PIDGains(0.25, 0, 0), z_gains=PIDGains(0.25, 0, 0))
+
+   Struct to contain controller gains used by position PID controller
+
+   .. attribute:: x_gains
+
+      kP, kI, kD for X axis
+
+      :type: PIDGains
+
+   .. attribute:: y_gains
+
+      kP, kI, kD for Y axis
+
+      :type: PIDGains
+
+   .. attribute:: z_gains
+
+      kP, kI, kD for Z axis
+
+      :type: PIDGains
+
+   .. method:: to_lists(self)
+
+
+
+
+.. py:class:: TrajectoryTrackerGains(kp_cross_track=7.5, kd_cross_track=0.0, kp_vel_cross_track=5.0, kd_vel_cross_track=0.0, kp_along_track=0.4, kd_along_track=0.0, kp_vel_along_track=0.04, kd_vel_along_track=0.0, kp_z_track=2.0, kd_z_track=0.0, kp_vel_z=0.4, kd_vel_z=0.0, kp_yaw=3.0, kd_yaw=0.1)
+
+   Struct to contain trajectory tracker gains used by the pure pursuit controller for moveBySpline and moveBySplineVelConstraints
+
+   .. attribute:: kp_cross_track
+
+      P gain for position error measured perpendicular to path tangent, or in the "cross track" direction
+
+      :type: float
+
+   .. attribute:: kd_cross_track
+
+      D gain for position error measured perpendicular to path tangent, or in the "cross track" direction
+
+      :type: float
+
+   .. attribute:: kp_vel_cross_track
+
+      P gain for velocity error measured perpendicular to path tangent, or in the "cross track" direction
+
+      :type: float
+
+   .. attribute:: kd_vel_cross_track
+
+      D gain for velocity error measured perpendicular to path tangent, or in the "cross track" direction
+
+      :type: float
+
+   .. attribute:: kp_along_track
+
+      P gain for position error measured along path tangent
+
+      :type: float
+
+   .. attribute:: kd_along_track
+
+      D gain for position error measured along path tangent
+
+      :type: float
+
+   .. attribute:: kp_vel_along_track
+
+      P gain for velocity error measured along path tangent
+
+      :type: float
+
+   .. attribute:: kd_vel_along_track
+
+      D gain for velocity error measured along path tangent
+
+      :type: float
+
+   .. attribute:: kp_z_track
+
+      P gain for position error measured along world Z axis
+
+      :type: float
+
+   .. attribute:: kd_z_track
+
+      D gain for position error measured along world Z axis
+
+      :type: float
+
+   .. attribute:: kp_vel_z
+
+      P gain for velocity error measured along world Z axis
+
+      :type: float
+
+   .. attribute:: kd_vel_z
+
+      D gain for velocity error measured along world Z axis
+
+      :type: float
+
+   .. attribute:: kp_yaw
+
+      P gain for yaw error
+
+      :type: float
+
+   .. attribute:: kd_yaw
+
+      D gain for yaw error
+
+      :type: float
+
+   .. method:: to_list(self)
+
+
+      Call this before sending to setTrajectoryTrackerGains
+
+      :returns: Description
+      :rtype: list[float]
+
+
+
+.. py:class:: MeshPositionVertexBuffersResponse
+
+   Bases: :class:`airsimdroneracinglab.types.MsgpackMixin`
+
+   
+   .. attribute:: position
+      
+
+      
+
+   .. attribute:: orientation
+      
+
+      
+
+   .. attribute:: vertices
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: indices
+      :annotation: = 0.0
+
+      
+
+   .. attribute:: name
+      :annotation: = 
+
+      
+
+

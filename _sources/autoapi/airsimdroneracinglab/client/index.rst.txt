@@ -1,0 +1,1575 @@
+:mod:`airsimdroneracinglab.client`
+==================================
+
+.. py:module:: airsimdroneracinglab.client
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   airsimdroneracinglab.client.VehicleClient
+   airsimdroneracinglab.client.MultirotorClient
+
+
+
+.. py:class:: VehicleClient(ip='', port=41451, timeout_value=3600)
+
+   .. attribute:: __annotations__
+      
+
+      
+
+   .. method:: reset(self)
+
+
+      Reset the vehicle to its original starting state
+
+      Note that you must call `enableApiControl` and `armDisarm` again after the call to reset
+
+
+   .. method:: ping(self)
+
+
+      If connection is established then this call will return true otherwise it will be blocked until timeout
+
+      :returns:
+      :rtype: bool
+
+
+   .. method:: getClientVersion(self)
+
+
+
+   .. method:: getServerVersion(self)
+
+
+
+   .. method:: getMinRequiredServerVersion(self)
+
+
+
+   .. method:: getMinRequiredClientVersion(self)
+
+
+
+   .. method:: enableApiControl(self, vehicle_name='')
+
+
+      Enables API control for vehicle with name vehicle_name
+
+      :param vehicle_name: Name of vehicle to enable API control for
+      :type vehicle_name: str, optional
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: disableApiControl(self, vehicle_name='')
+
+
+      Disables API control for vehicle with name vehicle_name
+
+      :param vehicle_name: Name of vehicle to disable API control for
+      :type vehicle_name: str, optional
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: isApiControlEnabled(self, vehicle_name='')
+
+
+      Returns true if API control is established.
+
+      If false (which is default) then API calls would be ignored. After a successful call to `enableApiControl`, `isApiControlEnabled` should return true.
+
+      :param vehicle_name: Name of the vehicle
+      :type vehicle_name: str, optional
+
+      :returns: If API control is enabled
+      :rtype: bool
+
+
+   .. method:: arm(self, vehicle_name='')
+
+
+      Arms vehicle corresponding to vehicle_name
+
+      :param vehicle_name: Name of vehicle
+      :type vehicle_name: str
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: disarm(self, vehicle_name='')
+
+
+      Disarms vehicle corresponding to vehicle_name.
+
+      :param vehicle_name: Name of vehicle
+      :type vehicle_name: str
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: simPause(self, is_paused)
+
+
+      Pauses simulation
+
+      :param is_paused: True to pause the simulation, False to release
+      :type is_paused: bool
+
+
+   .. method:: simIsPause(self)
+
+
+      Returns true if the simulation is paused
+
+      :returns: If the simulation is paused
+      :rtype: bool
+
+
+   .. method:: simContinueForTime(self, seconds)
+
+
+      Continue the simulation for the specified number of seconds
+
+      :param seconds: Time to run the simulation for
+      :type seconds: float
+
+
+   .. method:: getHomeGeoPoint(self, vehicle_name='')
+
+
+      Get the Home location of the vehicle
+
+      :param vehicle_name: Name of vehicle to get home location of
+      :type vehicle_name: str, optional
+
+      :returns: Home location of the vehicle
+      :rtype: GeoPoint
+
+
+   .. method:: confirmConnection(self)
+
+
+      Checks state of connection every 1 sec and reports it in Console so user can see the progress for connection.
+
+
+   .. method:: simSwapTextures(self, tags, tex_id=0, component_id=0, material_id=0)
+
+
+      Runtime Swap Texture API
+
+      See https://microsoft.github.io/AirSim/retexturing/ for details
+
+      :param tags: string of "," or ", " delimited tags to identify on which actors to perform the swap
+      :type tags: str
+      :param tex_id: indexes the array of textures assigned to each actor undergoing a swap
+
+                     If out-of-bounds for some object's texture set, it will be taken modulo the number of textures that were available
+      :type tex_id: int, optional
+      :param component_id:
+      :type component_id: int, optional
+      :param material_id:
+      :type material_id: int, optional
+
+      :returns: List of objects which matched the provided tags and had the texture swap perfomed
+      :rtype: list[str]
+
+
+   .. method:: simSetTimeOfDay(self, is_enabled, start_datetime='', is_start_datetime_dst=False, celestial_clock_speed=1, update_interval_secs=60, move_sun=True)
+
+
+      Control the position of Sun in the environment
+
+      Sun's position is computed using the coordinates specified in `OriginGeopoint` in settings for the date-time specified in the argument,
+      else if the string is empty, current date & time is used
+
+      :param is_enabled: True to enable time-of-day effect, False to reset the position to original
+      :type is_enabled: bool
+      :param start_datetime: Date & Time in %Y-%m-%d %H:%M:%S format, e.g. `2018-02-12 15:20:00`
+      :type start_datetime: str, optional
+      :param is_start_datetime_dst: True to adjust for Daylight Savings Time
+      :type is_start_datetime_dst: bool, optional
+      :param celestial_clock_speed: Run celestial clock faster or slower than simulation clock
+                                    E.g. Value 100 means for every 1 second of simulation clock, Sun's position is advanced by 100 seconds
+                                    so Sun will move in sky much faster
+      :type celestial_clock_speed: float, optional
+      :param update_interval_secs: Interval to update the Sun's position
+      :type update_interval_secs: float, optional
+      :param move_sun: Whether or not to move the Sun
+      :type move_sun: bool, optional
+
+
+   .. method:: simEnableWeather(self, enable)
+
+
+      Enable Weather effects. Needs to be called before using `simSetWeatherParameter` API
+
+      :param enable: True to enable, False to disable
+      :type enable: bool
+
+
+   .. method:: simSetWeatherParameter(self, param, val)
+
+
+      Enable various weather effects
+
+      :param param: Weather effect to be enabled
+      :type param: WeatherParameter
+      :param val: Intensity of the effect, Range 0-1
+      :type val: float
+
+
+   .. method:: simSetTextureFromUrl(self, object_name, url)
+
+
+      Set texture of an object from a URL resource.
+
+      :param object_name: Name of object for which the texture is to be set
+      :type object_name: string
+      :param url: URL of texture file
+      :type url: string
+
+
+   .. method:: simGetImage(self, camera_name, image_type, vehicle_name='')
+
+
+      Get a single image
+
+      Returns bytes of png format image which can be dumped into abinary file to create .png image
+      `string_to_uint8_array()` can be used to convert into Numpy unit8 array
+      See https://microsoft.github.io/AirSim/image_apis/ for details
+
+      :param camera_name: Name of the camera, for backwards compatibility, ID numbers such as 0,1,etc. can also be used
+      :type camera_name: str
+      :param image_type: Type of image required
+      :type image_type: ImageType
+      :param vehicle_name: Name of the vehicle with the camera
+      :type vehicle_name: str, optional
+
+      :returns: Binary string literal of compressed png image
+
+
+   .. method:: simGetImages(self, requests, vehicle_name='')
+
+
+      Get multiple images
+
+      See https://microsoft.github.io/AirSim/image_apis/ for details and examples
+
+      :param requests: Images required
+      :type requests: list[ImageRequest]
+      :param vehicle_name: Name of vehicle associated with the camera
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: list[ImageResponse]
+
+
+   .. method:: simGetMeshPositionVertexBuffers(self)
+
+
+      Returns the static meshes that make up the scene
+
+      See https://microsoft.github.io/AirSim/meshes/ for details and how to use this
+
+      :returns:
+      :rtype: list[MeshPositionVertexBuffersResponse]
+
+
+   .. method:: simGetCollisionInfo(self, vehicle_name='')
+
+
+      :param vehicle_name: Name of the Vehicle to get the info of
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: CollisionInfo
+
+
+   .. method:: simSetVehiclePose(self, pose, ignore_collison, vehicle_name='')
+
+
+      Set the pose of the vehicle
+
+      If you don't want to change position (or orientation) then just set components of position (or orientation) to floating point nan values
+
+      :param pose: Desired Pose pf the vehicle
+      :type pose: Pose
+      :param ignore_collision: Whether to ignore any collision or not
+      :type ignore_collision: bool
+      :param vehicle_name: Name of the vehicle to move
+      :type vehicle_name: str, optional
+
+
+   .. method:: simGetVehiclePose(self, vehicle_name='')
+
+
+      :param vehicle_name: Name of the vehicle to get the Pose of
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: Pose
+
+
+   .. method:: simSetTraceLine(self, color_rgba, thickness=1.0, vehicle_name='')
+
+
+      Modify the color and thickness of the line when Tracing is enabled
+
+      Tracing can be enabled by pressing T in the Editor or setting `EnableTrace` to `True` in the Vehicle Settings
+
+      :param color_rgba: desired RGBA values from 0.0 to 1.0
+      :type color_rgba: list
+      :param thickness: Thickness of the line
+      :type thickness: float, optional
+      :param vehicle_name: Name of the vehicle to set Trace line values for
+      :type vehicle_name: string, optional
+
+
+   .. method:: simGetObjectPose(self, object_name)
+
+
+      Returns true pose if simstartrace is not called
+      Returns true pose if simstartrace was called with tier=1
+      Returns noisy pose if simstartrace was called with tier=2 or tier=3
+
+      :param object_name: Name of the object to get pose for
+      :type object_name: str
+
+      :returns: pose of desired object, NanPose if object not found
+      :rtype: Pose
+
+
+   .. method:: __internalGetObjectPose(self, object_name)
+
+
+
+   .. method:: simSetObjectPose(self, object_name, pose, teleport=True)
+
+
+      Set the pose of the object(actor) in the environment
+
+      The specified actor must have Mobility set to movable, otherwise there will be undefined behaviour.
+      See https://www.unrealengine.com/en-US/blog/moving-physical-objects for details on how to set Mobility and the effect of Teleport parameter
+
+      :param object_name: Name of the object(actor) to move
+      :type object_name: str
+      :param pose: Desired Pose of the object
+      :type pose: Pose
+      :param teleport: Whether to move the object immediately without affecting their velocity
+      :type teleport: bool, optional
+
+      :returns: If the move was successful
+      :rtype: bool
+
+
+   .. method:: simGetNominalGateInnerDimensions(self)
+
+
+      - Return the dimensions of the drone racing gate cavity, with scale (width=1.0, thickness=1.0, height=1.0)
+      - Use this API in conjunction with simGetObjectScale(), simSetObjectScale(), simSetObjectPose() to generate arbitrary sized checkered gates with arbitrary poses.
+
+      :returns: width, thickness, height of the gate inner cavity in meters.
+                See https://github.com/microsoft/AirSim-NeurIPS2019-Drone-Racing/issues/28 for gate coordinate system
+      :rtype: Vector3r
+
+
+   .. method:: simGetNominalGateOuterDimensions(self)
+
+
+      - Return the outer dimensions of the drone racing gate, with scale (width=1.0, thickness=1.0, height=1.0)
+      - Use this API in conjunction with simGetObjectScale(), simSetObjectScale(), simSetObjectPose() to generate arbitrary sized checkered gates with arbitrary poses.
+
+      :returns: width, thickness, height of the gate inner cavity in meters.
+                See https://github.com/microsoft/AirSim-NeurIPS2019-Drone-Racing/issues/28 for gate coordinate system
+      :rtype: Vector3r
+
+
+   .. method:: simGetObjectScale(self, object_name)
+
+
+      :param object_name: Name of the object to poll
+      :type object_name: str
+
+      :returns: scale vector of desired object
+      :rtype: Vector3r
+
+
+   .. method:: simGetObjectScaleInternal(self, object_name)
+
+
+
+   .. method:: simSetObjectScale(self, object_name, scale_vector)
+
+
+      :param object_name: Name of the object to poll
+      :type object_name: str
+      :param scale: desired scale of the object
+      :type scale: Vector3r
+
+
+   .. method:: simLoadLevel(self, level_name)
+
+
+      Loads desired level
+
+      :param level_name: Description
+      :type level_name: str
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: simListSceneObjects(self, name_regex='.*')
+
+
+      Lists the objects present in the environment
+
+      Default behaviour is to list all objects, regex can be used to return smaller list of matching objects or actors
+
+      :param name_regex: String to match actor names against, e.g. "Cylinder.*"
+      :type name_regex: str, optional
+
+      :returns: List containing all the names
+      :rtype: list[str]
+
+
+   .. method:: simSetSegmentationObjectID(self, mesh_name, object_id, is_name_regex=False)
+
+
+      Set segmentation ID for specific objects
+
+      See https://microsoft.github.io/AirSim/image_apis/#segmentation for details
+
+      :param mesh_name: Name of the mesh to set the ID of (supports regex)
+      :type mesh_name: str
+      :param object_id: Object ID to be set, range 0-255
+
+                        RBG values for IDs can be seen at https://microsoft.github.io/AirSim/seg_rgbs.txt
+      :type object_id: int
+      :param is_name_regex: Whether the mesh name is a regex
+      :type is_name_regex: bool, optional
+
+      :returns: If the mesh was found
+      :rtype: bool
+
+
+   .. method:: simGetSegmentationObjectID(self, mesh_name)
+
+
+      Returns Object ID for the given mesh name
+
+      Mapping of Object IDs to RGB values can be seen at https://microsoft.github.io/AirSim/seg_rgbs.txt
+
+      :param mesh_name: Name of the mesh to get the ID of
+      :type mesh_name: str
+
+
+   .. method:: simPrintLogMessage(self, message, message_param='', severity=0)
+
+
+      Prints the specified message in the simulator's window.
+
+      If message_param is supplied, then it's printed next to the message and in that case if this API is called with same message value
+      but different message_param again then previous line is overwritten with new line (instead of API creating new line on display).
+
+      For example, `simPrintLogMessage("Iteration: ", to_string(i))` keeps updating same line on display when API is called with different values of i.
+      The valid values of severity parameter is 0 to 3 inclusive that corresponds to different colors.
+
+      :param message: Message to be printed
+      :type message: str
+      :param message_param: Parameter to be printed next to the message
+      :type message_param: str, optional
+      :param severity: Range 0-3, inclusive, corresponding to the severity of the message
+      :type severity: int, optional
+
+
+   .. method:: simGetCameraInfo(self, camera_name, vehicle_name='')
+
+
+      Get details about the camera
+
+      :param camera_name: Name of the camera, for backwards compatibility, ID numbers such as 0,1,etc. can also be used
+      :type camera_name: str
+      :param vehicle_name: Vehicle which the camera is associated with
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: CameraInfo
+
+
+   .. method:: simSetCameraOrientation(self, camera_name, orientation, vehicle_name='')
+
+
+      - Control the orientation of a selected camera
+
+      :param camera_name: Name of the camera to be controlled
+      :type camera_name: str
+      :param orientation: Quaternion representing the desired orientation of the camera
+      :type orientation: Quaternionr
+      :param vehicle_name: Name of vehicle which the camera corresponds to
+      :type vehicle_name: str, optional
+
+
+   .. method:: simSetCameraFov(self, camera_name, fov_degrees, vehicle_name='')
+
+
+      - Control the field of view of a selected camera
+
+      :param camera_name: Name of the camera to be controlled
+      :type camera_name: str
+      :param fov_degrees: Value of field of view in degrees
+      :type fov_degrees: float
+      :param vehicle_name: Name of vehicle which the camera corresponds to
+      :type vehicle_name: str, optional
+
+
+   .. method:: simGetGroundTruthKinematics(self, vehicle_name='')
+
+
+      Get Ground truth kinematics of the vehicle
+
+      :param vehicle_name: Name of the vehicle
+      :type vehicle_name: str, optional
+
+      :returns: Ground truth of the vehicle
+      :rtype: KinematicsState
+
+
+   .. method:: simGetGroundTruthEnvironment(self, vehicle_name='')
+
+
+      Get ground truth environment state
+
+      :param vehicle_name: Name of the vehicle
+      :type vehicle_name: str, optional
+
+      :returns: Ground truth environment state
+      :rtype: EnvironmentState
+
+
+   .. method:: getImuData(self, imu_name='', vehicle_name='')
+
+
+      :param imu_name: Name of IMU to get data from, specified in settings.json
+      :type imu_name: str, optional
+      :param vehicle_name: Name of vehicle to which the sensor corresponds to
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: ImuData
+
+
+   .. method:: getBarometerData(self, barometer_name='', vehicle_name='')
+
+
+      :param barometer_name: Name of Barometer to get data from, specified in settings.json
+      :type barometer_name: str, optional
+      :param vehicle_name: Name of vehicle to which the sensor corresponds to
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: BarometerData
+
+
+   .. method:: getMagnetometerData(self, magnetometer_name='', vehicle_name='')
+
+
+      :param magnetometer_name: Name of Magnetometer to get data from, specified in settings.json
+      :type magnetometer_name: str, optional
+      :param vehicle_name: Name of vehicle to which the sensor corresponds to
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: MagnetometerData
+
+
+   .. method:: getGpsData(self, gps_name='', vehicle_name='')
+
+
+      :param gps_name: Name of GPS to get data from, specified in settings.json
+      :type gps_name: str, optional
+      :param vehicle_name: Name of vehicle to which the sensor corresponds to
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: GpsData
+
+
+   .. method:: getDistanceSensorData(self, distance_sensor_name='', vehicle_name='')
+
+
+      :param distance_sensor_name: Name of Distance Sensor to get data from, specified in settings.json
+      :type distance_sensor_name: str, optional
+      :param vehicle_name: Name of vehicle to which the sensor corresponds to
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: DistanceSensorData
+
+
+   .. method:: getLidarData(self, lidar_name='', vehicle_name='')
+
+
+      :param lidar_name: Name of Lidar to get data from, specified in settings.json
+      :type lidar_name: str, optional
+      :param vehicle_name: Name of vehicle to which the sensor corresponds to
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: LidarData
+
+
+   .. method:: simGetLidarSegmentation(self, lidar_name='', vehicle_name='')
+
+
+      Returns Segmentation ID of each point's collided object in the last Lidar update
+
+      :param lidar_name: Name of Lidar sensor
+      :type lidar_name: str, optional
+      :param vehicle_name: Name of the vehicle wth the sensor
+      :type vehicle_name: str, optional
+
+      :returns: Segmentation IDs of the objects
+      :rtype: list[int]
+
+
+   .. method:: simFlushPersistentMarkers(self)
+
+
+      Clear any persistent markers - those plotted with setting `is_persistent=True` in the APIs below
+
+
+   .. method:: simPlotPoints(self, points, color_rgba=[1.0, 0.0, 0.0, 1.0], size=10.0, duration=-1.0, is_persistent=False)
+
+
+      Plot a list of 3D points in World NED frame
+
+      :param points: List of Vector3r objects
+      :type points: list[Vector3r]
+      :param color_rgba: desired RGBA values from 0.0 to 1.0
+      :type color_rgba: list, optional
+      :param size: Size of plotted point
+      :type size: float, optional
+      :param duration: Duration (seconds) to plot for
+      :type duration: float, optional
+      :param is_persistent: If set to True, the desired object will be plotted for infinite time.
+      :type is_persistent: bool, optional
+
+
+   .. method:: simPlotLineStrip(self, points, color_rgba=[1.0, 0.0, 0.0, 1.0], thickness=5.0, duration=-1.0, is_persistent=False)
+
+
+      Plots a line strip in World NED frame, defined from points[0] to points[1], points[1] to points[2], ... , points[n-2] to points[n-1]
+
+      :param points: List of 3D locations of line start and end points, specified as Vector3r objects
+      :type points: list[Vector3r]
+      :param color_rgba: desired RGBA values from 0.0 to 1.0
+      :type color_rgba: list, optional
+      :param thickness: Thickness of line
+      :type thickness: float, optional
+      :param duration: Duration (seconds) to plot for
+      :type duration: float, optional
+      :param is_persistent: If set to True, the desired object will be plotted for infinite time.
+      :type is_persistent: bool, optional
+
+
+   .. method:: simPlotLineList(self, points, color_rgba=[1.0, 0.0, 0.0, 1.0], thickness=5.0, duration=-1.0, is_persistent=False)
+
+
+      Plots a line strip in World NED frame, defined from points[0] to points[1], points[2] to points[3], ... , points[n-2] to points[n-1]
+
+      :param points: List of 3D locations of line start and end points, specified as Vector3r objects. Must be even
+      :type points: list[Vector3r]
+      :param color_rgba: desired RGBA values from 0.0 to 1.0
+      :type color_rgba: list, optional
+      :param thickness: Thickness of line
+      :type thickness: float, optional
+      :param duration: Duration (seconds) to plot for
+      :type duration: float, optional
+      :param is_persistent: If set to True, the desired object will be plotted for infinite time.
+      :type is_persistent: bool, optional
+
+
+   .. method:: simPlotArrows(self, points_start, points_end, color_rgba=[1.0, 0.0, 0.0, 1.0], thickness=5.0, arrow_size=2.0, duration=-1.0, is_persistent=False)
+
+
+      Plots a list of arrows in World NED frame, defined from points_start[0] to points_end[0], points_start[1] to points_end[1], ... , points_start[n-1] to points_end[n-1]
+
+      :param points_start: List of 3D start positions of arrow start positions, specified as Vector3r objects
+      :type points_start: list[Vector3r]
+      :param points_end: List of 3D end positions of arrow start positions, specified as Vector3r objects
+      :type points_end: list[Vector3r]
+      :param color_rgba: desired RGBA values from 0.0 to 1.0
+      :type color_rgba: list, optional
+      :param thickness: Thickness of line
+      :type thickness: float, optional
+      :param arrow_size: Size of arrow head
+      :type arrow_size: float, optional
+      :param duration: Duration (seconds) to plot for
+      :type duration: float, optional
+      :param is_persistent: If set to True, the desired object will be plotted for infinite time.
+      :type is_persistent: bool, optional
+
+
+   .. method:: simPlotStrings(self, strings, positions, scale=5, color_rgba=[1.0, 0.0, 0.0, 1.0], duration=-1.0)
+
+
+      Plots a list of strings at desired positions in World NED frame.
+
+      :param strings: List of strings to plot
+      :type strings: list[String], optional
+      :param positions: List of positions where the strings should be plotted. Should be in one-to-one correspondence with the strings' list
+      :type positions: list[Vector3r]
+      :param scale: Font scale of transform name
+      :type scale: float, optional
+      :param color_rgba: desired RGBA values from 0.0 to 1.0
+      :type color_rgba: list, optional
+      :param duration: Duration (seconds) to plot for
+      :type duration: float, optional
+
+
+   .. method:: simPlotTransforms(self, poses, scale=5.0, thickness=5.0, duration=-1.0, is_persistent=False)
+
+
+      Plots a list of transforms in World NED frame.
+
+      :param poses: List of Pose objects representing the transforms to plot
+      :type poses: list[Pose]
+      :param scale: Length of transforms' axes
+      :type scale: float, optional
+      :param thickness: Thickness of transforms' axes
+      :type thickness: float, optional
+      :param duration: Duration (seconds) to plot for
+      :type duration: float, optional
+      :param is_persistent: If set to True, the desired object will be plotted for infinite time.
+      :type is_persistent: bool, optional
+
+
+   .. method:: simPlotTransformsWithNames(self, poses, names, tf_scale=5.0, tf_thickness=5.0, text_scale=10.0, text_color_rgba=[1.0, 0.0, 0.0, 1.0], duration=-1.0)
+
+
+      Plots a list of transforms with their names in World NED frame.
+
+      :param poses: List of Pose objects representing the transforms to plot
+      :type poses: list[Pose]
+      :param names: List of strings with one-to-one correspondence to list of poses
+      :type names: list[string]
+      :param tf_scale: Length of transforms' axes
+      :type tf_scale: float, optional
+      :param tf_thickness: Thickness of transforms' axes
+      :type tf_thickness: float, optional
+      :param text_scale: Font scale of transform name
+      :type text_scale: float, optional
+      :param text_color_rgba: desired RGBA values from 0.0 to 1.0 for the transform name
+      :type text_color_rgba: list, optional
+      :param duration: Duration (seconds) to plot for
+      :type duration: float, optional
+
+
+   .. method:: cancelLastTask(self, vehicle_name='')
+
+
+      Cancel previous Async task
+
+      :param vehicle_name: Name of the vehicle
+      :type vehicle_name: str, optional
+
+
+   .. method:: waitOnLastTask(self, timeout_sec=float('nan'))
+
+
+      Wait for the last Async task to complete
+
+      :param timeout_sec: Time for the task to complete
+      :type timeout_sec: float, optional
+
+      :returns:
+
+                Result of the last task
+
+                      True if the task completed without cancellation or timeout
+      :rtype: bool
+
+
+
+.. py:class:: MultirotorClient(ip='', port=41451, timeout_value=3600)
+
+   Bases: :class:`airsimdroneracinglab.client.VehicleClient`, :class:`object`
+
+   .. attribute:: __annotations__
+      
+
+      
+
+   .. method:: takeoffAsync(self, timeout_sec=20, vehicle_name='')
+
+
+      Takeoff vehicle to 3m above ground. Vehicle should not be moving when this API is used
+
+      :param timeout_sec: Timeout for the vehicle to reach desired altitude
+      :type timeout_sec: int, optional
+      :param vehicle_name: Name of the vehicle to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: landAsync(self, timeout_sec=60, vehicle_name='')
+
+
+      Land the vehicle
+
+      :param timeout_sec: Timeout for the vehicle to land
+      :type timeout_sec: int, optional
+      :param vehicle_name: Name of the vehicle to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: goHomeAsync(self, timeout_sec=3e+38, vehicle_name='')
+
+
+      Return vehicle to Home i.e. Launch location
+
+      :param timeout_sec: Timeout for the vehicle to reach desired altitude
+      :type timeout_sec: int, optional
+      :param vehicle_name: Name of the vehicle to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveByAngleZAsync(self, pitch, roll, z, yaw, duration, vehicle_name='')
+
+
+
+   .. method:: moveByAngleThrottleAsync(self, pitch, roll, throttle, yaw_rate, duration, vehicle_name='')
+
+
+
+   .. method:: moveByVelocityAsync(self, vx, vy, vz, duration, drivetrain=DrivetrainType.MaxDegreeOfFreedom, yaw_mode=YawMode(), vehicle_name='')
+
+
+      :param vx: desired velocity in world (NED) X axis
+      :type vx: float
+      :param vy: desired velocity in world (NED) Y axis
+      :type vy: float
+      :param vz: desired velocity in world (NED) Z axis
+      :type vz: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param drivetrain:
+      :type drivetrain: DrivetrainType, optional
+      :param yaw_mode:
+      :type yaw_mode: YawMode, optional
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveByVelocityZAsync(self, vx, vy, z, duration, drivetrain=DrivetrainType.MaxDegreeOfFreedom, yaw_mode=YawMode(), vehicle_name='')
+
+
+      :param vx: desired velocity in world (NED) X axis
+      :type vx: float
+      :param vy: desired velocity in world (NED) Y axis
+      :type vy: float
+      :param z: desired altitude in world (NED) Z axis
+      :type z: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param drivetrain: Description
+      :type drivetrain: DrivetrainType, optional
+      :param yaw_mode: Description
+      :type yaw_mode: YawMode, optional
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveOnPathAsync(self, path, velocity, timeout_sec=3e+38, drivetrain=DrivetrainType.MaxDegreeOfFreedom, yaw_mode=YawMode(), lookahead=-1, adaptive_lookahead=1, vehicle_name='')
+
+
+      :param path: Description
+      :type path: TYPE
+      :param velocity: Description
+      :type velocity: TYPE
+      :param timeout_sec: Description
+      :type timeout_sec: float, optional
+      :param drivetrain: Description
+      :type drivetrain: TYPE, optional
+      :param yaw_mode: Description
+      :type yaw_mode: TYPE, optional
+      :param lookahead: Description
+      :type lookahead: TYPE, optional
+      :param adaptive_lookahead: Description
+      :type adaptive_lookahead: int, optional
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: moveToPositionAsync(self, x, y, z, velocity, timeout_sec=3e+38, drivetrain=DrivetrainType.MaxDegreeOfFreedom, yaw_mode=YawMode(), lookahead=-1, adaptive_lookahead=1, vehicle_name='')
+
+
+      :param x: Description
+      :type x: float
+      :param y: Description
+      :type y: float
+      :param z: Description
+      :type z: float
+      :param velocity: Description
+      :type velocity: float
+      :param timeout_sec: Description
+      :type timeout_sec: float, optional
+      :param drivetrain: Description
+      :type drivetrain: DrivetrainType, optional
+      :param yaw_mode: Description
+      :type yaw_mode: YawMode, optional
+      :param lookahead: Description
+      :type lookahead: float, optional
+      :param adaptive_lookahead: Description
+      :type adaptive_lookahead: int, optional
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: moveToZAsync(self, z, velocity, timeout_sec=3e+38, yaw_mode=YawMode(), lookahead=-1, adaptive_lookahead=1, vehicle_name='')
+
+
+      :param z: Description
+      :type z: float
+      :param velocity: Description
+      :type velocity: float
+      :param timeout_sec: Description
+      :type timeout_sec: float, optional
+      :param yaw_mode: Description
+      :type yaw_mode: YawMode, optional
+      :param lookahead: Description
+      :type lookahead: float, optional
+      :param adaptive_lookahead: Description
+      :type adaptive_lookahead: int, optional
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: moveToYawAsync(self, yaw, timeout_sec=3e+38, margin=5, vehicle_name='')
+
+
+      :param yaw_rate: Desired yaw angle, in **degrees per second**.
+      :type yaw_rate: float
+      :param timeout_sec: Description
+      :type timeout_sec: float, optional
+      :param margin: Description
+      :type margin: int, optional
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: moveByYawRateAsync(self, yaw_rate, duration, vehicle_name='')
+
+
+      :param yaw_rate: Desired yaw rate, in **degrees per second**.
+      :type yaw_rate: float
+      :param duration: Description
+      :type duration: float
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: moveOnSplineAsync(self, waypoints, vel_max=15.0, acc_max=7.5, add_position_constraint=True, add_velocity_constraint=True, add_acceleration_constraint=False, viz_traj=True, viz_traj_color_rgba=[1.0, 0.0, 0.0, 1.0], replan_from_lookahead=True, replan_lookahead_sec=1.0, vehicle_name='')
+
+
+      - Fits a minimum jerk trajectory to the list of given 3D waypoints (specified by the waypoints parameter).
+      - Uses ETHZ-ASL's `mav_trajectory_generation <https://github.com/ethz-asl/mav_trajectory_generation>`_ as the trajectory planning backend.
+      - Tracks the references positions and velocities using a pure pursuit tracking controller.
+      - The gains of the pure pursuit tracking controller are set by setTrajectoryTrackerGains.
+      - Reference yaws are allocated along the tangent of the trajectory. Hence the drone will always look at the direction along which it is flying, behaving like a 3D car.
+      - Note: setTrajectoryTrackerGains() must be called once before calling moveOnSpline()
+
+      :param waypoints:
+                        - List of 3D waypoints, defined in local NED frame of the vehicle to track.
+      :type waypoints: list[Vector3r]
+      :param vel_max:
+                      - Maximum magnitude of velocity along trajectory
+      :type vel_max: float, optional
+      :param acc_max:
+                      - Maximum magnitude of acceleration along trajectory
+      :type acc_max: float, optional
+      :param add_position_constraint:
+                                      - Add a start constraint at current position, so that the planned trajectory is smooth if the drone is already moving.
+                                      - If replan_from_lookahead is False, and add_position_constraint is False, trajectory starts from the first element of the "waypoints" list param.
+                                      - If replan_from_lookahead is False, and add_position_constraint is True, a position constraint is added at current odometry, and so the trajectory starts from current position.
+                                      - If replan_from_lookahead is True, a position constraint trajectory is always added at look-ahead point regardless of the value of "add_position_constraint", and so the trajectory starts from the lookahead point.
+                                      - See below for the definition of "look-ahead point".
+      :type add_position_constraint: bool, optional
+      :param add_velocity_constraint:
+                                      - Should only be set to True if add_position_constraint is True.
+                                      - If replan_from_lookahead is True, a velocity constraint is added at current odometry.
+                                      - If replan_from_lookahead is True, a velocity constraint is added at lookahead point.
+      :type add_velocity_constraint: bool, optional
+      :param add_acceleration_constraint:
+                                          - Should only be set to True if add_velocity_constraint (and therefore, add_position_constraint) is True.
+                                          - If replan_from_lookahead is True, an acceleration constraint is added at current odometry.
+                                          - If replan_from_lookahead is True, an acceleration constraint is added at lookahead point.
+      :type add_acceleration_constraint: bool, optional
+      :param viz_traj:
+                       - set this to True to visualize trajectory in unreal window.
+                       - Note that visualization would appear in the FPV image, so this should only be used for debugging.
+      :type viz_traj: bool, optional
+      :param viz_traj_color_rgba:
+                                  - list of 4 floats from 0.0 to 1.0 that determines RGBA value of trajectory visualization.
+                                  - Example: viz_traj_color_rgba=[1.0, 0.0, 0.0, 1.0] corresponds to Red
+      :type viz_traj_color_rgba: list, optional
+      :param replan_from_lookahead:
+                                    - If this is set to true, the trajectory will start from the "look-ahead point" associated with the trajectory the drone is currently following.
+                                    - The lookahead point is defined by the value of the replan_lookahead_sec paramater sent in the *previous* call to moveOnSpline.
+      :type replan_from_lookahead: bool, optional
+      :param replan_lookahead_sec:
+                                   - Defines the lookahead point by sampling the current trajectory replan_lookahead_sec number of seconds ahead.
+                                   - If replan_from_lookahead is passed as True in the *next* call to moveOnSpline, the *next* call's trajectory will start from the lookahead point defined by the *current* call's replan_lookahead_sec
+      :type replan_lookahead_sec: float, optional
+      :param vehicle_name:
+                           - Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: moveOnSplineVelConstraintsAsync(self, waypoints, velocity_constraints, vel_max=15.0, acc_max=7.5, add_position_constraint=True, add_velocity_constraint=True, add_acceleration_constraint=False, viz_traj=True, viz_traj_color_rgba=[1.0, 0.0, 0.0, 0.4], replan_from_lookahead=True, replan_lookahead_sec=1.0, vehicle_name='')
+
+
+      - Fits a minimum jerk trajectory to the list of given 3D waypoints (specified by the waypoints parameter).
+      - Also adds corresponding 3D velocity vector constraints (specified by the velocity_constraints parameter).
+      - Uses ETHZ-ASL's `mav_trajectory_generation <https://github.com/ethz-asl/mav_trajectory_generation>`_ as the trajectory planning backend.
+      - Tracks the references positions and velocities using a pure pursuit tracking controller.
+      - The gains of the pure pursuit tracking controller are set by setTrajectoryTrackerGains.
+      - Reference yaws are allocated along the tangent of the trajectory. Hence the drone will always look at the direction along which it is flying, behaving like a 3D car.
+      - Reference yaws are allocated along the tangent of the trajectory.
+      - Note: setTrajectoryTrackerGains() must be called once before calling moveOnSpline()
+
+      :param waypoints:
+                        - List of 3D waypoints, defined in local NED frame of the vehicle to track.
+      :type waypoints: list[Vector3r]
+      :param velocity_constraints:
+                                   - List of 3D velocity vector constraints, defined in local NED frame of the vehicle to track.
+      :type velocity_constraints: list[Vector3r]
+      :param vel_max:
+                      - Maximum magnitude of velocity along trajectory
+      :type vel_max: float, optional
+      :param acc_max:
+      :type acc_max: float, optional
+      :param - Maximum magnitude of acceleration along trajectory:
+      :param add_position_constraint:
+                                      - Add a start constraint at current position, so that the planned trajectory is smooth if the drone is already moving.
+                                      - If replan_from_lookahead is False, and add_position_constraint is False, trajectory starts from the first element of the "waypoints" list param.
+                                      - If replan_from_lookahead is False, and add_position_constraint is True, a position constraint is added at current odometry, and so the trajectory starts from current position.
+                                      - If replan_from_lookahead is True, a position constraint trajectory is always added at look-ahead point regardless of the value of "add_position_constraint", and so the trajectory starts from the lookahead point.
+                                      - See below for the definition of "look-ahead point".
+      :type add_position_constraint: bool, optional
+      :param add_velocity_constraint:
+                                      - Should only be set to True if add_position_constraint is True.
+                                      - If replan_from_lookahead is True, a velocity constraint is added at current odometry.
+                                      - If replan_from_lookahead is True, a velocity constraint is added at lookahead point.
+      :type add_velocity_constraint: bool, optional
+      :param add_acceleration_constraint:
+                                          - Should only be set to True if add_velocity_constraint (and therefore, add_position_constraint) is True.
+                                          - If replan_from_lookahead is True, an acceleration constraint is added at current odometry.
+                                          - If replan_from_lookahead is True, an acceleration constraint is added at lookahead point.
+      :type add_acceleration_constraint: bool, optional
+      :param viz_traj:
+                       - set this to True to visualize trajectory in unreal window.
+                       - Note that visualization would appear in the FPV image, so this should only be used for debugging.
+      :type viz_traj: bool, optional
+      :param viz_traj_color_rgba:
+                                  - list of 4 floats from 0.0 to 1.0 that determines RGBA value of trajectory visualization.
+                                  - Example: viz_traj_color_rgba=[1.0, 0.0, 0.0, 1.0] corresponds to Red
+      :type viz_traj_color_rgba: list, optional
+      :param replan_from_lookahead:
+                                    - If this is set to true, the trajectory will start from the "look-ahead point" associated with the trajectory the drone is currently following.
+                                    - The lookahead point is defined by the value of the replan_lookahead_sec paramater sent in the *previous* call to moveOnSpline.
+      :type replan_from_lookahead: bool, optional
+      :param replan_lookahead_sec:
+                                   - Defines the lookahead point by sampling the current trajectory replan_lookahead_sec number of seconds ahead.
+                                   - If replan_from_lookahead is passed as True in the *next* call to moveOnSpline, the *next* call's trajectory will start from the lookahead point defined by the *current* call's replan_lookahead_sec
+      :type replan_lookahead_sec: float, optional
+      :param vehicle_name:
+                           - Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: Success
+      :rtype: bool
+
+
+   .. method:: clearTrajectory(self, vehicle_name='')
+
+
+      Clears, and stops following the current trajectory (see moveOnSpline() or moveOnSplineVelConstraintsAsyn,c if any.
+
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: Description
+      :rtype: TYPE
+
+
+   .. method:: setTrajectoryTrackerGains(self, gains=TrajectoryTrackerGains(), vehicle_name='')
+
+
+      - Sets trajectory tracker gains for moveOnSplineAsync, moveOnSplineVelConstraintsAsync.
+      - Must be called once before either of the moveOnSpline*() APIs is called
+
+      :param gains: Pass TrajectoryTrackerGains() to set default values. Look at TrajectoryTrackerGains to set custom gains
+      :type gains: TrajectoryTrackerGains
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+
+   .. method:: moveByManualAsync(self, vx_max, vy_max, z_min, duration, drivetrain=DrivetrainType.MaxDegreeOfFreedom, yaw_mode=YawMode(), vehicle_name='')
+
+
+      - Read current RC state and use it to control the vehicles.
+
+      Parameters sets up the constraints on velocity and minimum altitude while flying. If RC state is detected to violate these constraints
+      then that RC state would be ignored.
+
+      :param vx_max: max velocity allowed in x direction
+      :type vx_max: float
+      :param vy_max: max velocity allowed in y direction
+      :type vy_max: float
+      :param vz_max: max velocity allowed in z direction
+      :type vz_max: float
+      :param z_min: min z allowed for vehicle position
+      :type z_min: float
+      :param duration: after this duration vehicle would switch back to non-manual mode
+      :type duration: float
+      :param drivetrain: when ForwardOnly, vehicle rotates itself so that its front is always facing the direction of travel. If MaxDegreeOfFreedom then it doesn't do that (crab-like movement)
+      :type drivetrain: DrivetrainType
+      :param yaw_mode: Specifies if vehicle should face at given angle (is_rate=False) or should be rotating around its axis at given rate (is_rate=True)
+      :type yaw_mode: YawMode
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: hoverAsync(self, vehicle_name='')
+
+
+
+   .. method:: moveByRC(self, rcdata=RCData(), vehicle_name='')
+
+
+
+   .. method:: moveByMotorPWMsAsync(self, front_right_pwm, rear_left_pwm, front_left_pwm, rear_right_pwm, duration, vehicle_name='')
+
+
+      - Directly control the motors using PWM values
+
+      :param front_right_pwm: PWM value for the front right motor (between 0.0 to 1.0)
+      :type front_right_pwm: float
+      :param rear_left_pwm: PWM value for the rear left motor (between 0.0 to 1.0)
+      :type rear_left_pwm: float
+      :param front_left_pwm: PWM value for the front left motor (between 0.0 to 1.0)
+      :type front_left_pwm: float
+      :param rear_right_pwm: PWM value for the rear right motor (between 0.0 to 1.0)
+      :type rear_right_pwm: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveByRollPitchYawZAsync(self, roll, pitch, yaw, z, duration, vehicle_name='')
+
+
+      - z is given in local NED frame of the vehicle.
+      - Roll angle, pitch angle, and yaw angle set points are given in **radians**, in the body frame.
+      - The body frame follows the Front Left Up (FLU) convention, and right-handedness.
+
+      - Frame Convention:
+          - X axis is along the **Front** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **roll** angle.
+          | Hence, rolling with a positive angle is equivalent to translating in the **right** direction, w.r.t. our FLU body frame.
+
+          - Y axis is along the **Left** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **pitch** angle.
+          | Hence, pitching with a positive angle is equivalent to translating in the **front** direction, w.r.t. our FLU body frame.
+
+          - Z axis is along the **Up** direction.
+
+          | Clockwise rotation about this axis defines a positive **yaw** angle.
+          | Hence, yawing with a positive angle is equivalent to rotated towards the **left** direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.
+
+      :param roll: Desired roll angle, in radians.
+      :type roll: float
+      :param pitch: Desired pitch angle, in radians.
+      :type pitch: float
+      :param yaw: Desired yaw angle, in radians.
+      :type yaw: float
+      :param z: Desired Z value (in local NED frame of the vehicle)
+      :type z: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveByRollPitchYawThrottleAsync(self, roll, pitch, yaw, throttle, duration, vehicle_name='')
+
+
+      - Desired throttle is between 0.0 to 1.0
+      - Roll angle, pitch angle, and yaw angle are given in **radians**, in the body frame.
+      - The body frame follows the Front Left Up (FLU) convention, and right-handedness.
+
+      - Frame Convention:
+          - X axis is along the **Front** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **roll** angle.
+          | Hence, rolling with a positive angle is equivalent to translating in the **right** direction, w.r.t. our FLU body frame.
+
+          - Y axis is along the **Left** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **pitch** angle.
+          | Hence, pitching with a positive angle is equivalent to translating in the **front** direction, w.r.t. our FLU body frame.
+
+          - Z axis is along the **Up** direction.
+
+          | Clockwise rotation about this axis defines a positive **yaw** angle.
+          | Hence, yawing with a positive angle is equivalent to rotated towards the **left** direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.
+
+      :param roll: Desired roll angle, in radians.
+      :type roll: float
+      :param pitch: Desired pitch angle, in radians.
+      :type pitch: float
+      :param yaw: Desired yaw angle, in radians.
+      :type yaw: float
+      :param throttle: Desired throttle (between 0.0 to 1.0)
+      :type throttle: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveByRollPitchYawrateThrottleAsync(self, roll, pitch, yaw_rate, throttle, duration, vehicle_name='')
+
+
+      - Desired throttle is between 0.0 to 1.0
+      - Roll angle, pitch angle, and yaw rate set points are given in **radians**, in the body frame.
+      - The body frame follows the Front Left Up (FLU) convention, and right-handedness.
+
+      - Frame Convention:
+          - X axis is along the **Front** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **roll** angle.
+          | Hence, rolling with a positive angle is equivalent to translating in the **right** direction, w.r.t. our FLU body frame.
+
+          - Y axis is along the **Left** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **pitch** angle.
+          | Hence, pitching with a positive angle is equivalent to translating in the **front** direction, w.r.t. our FLU body frame.
+
+          - Z axis is along the **Up** direction.
+
+          | Clockwise rotation about this axis defines a positive **yaw** angle.
+          | Hence, yawing with a positive angle is equivalent to rotated towards the **left** direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.
+
+      :param roll: Desired roll angle, in radians.
+      :type roll: float
+      :param pitch: Desired pitch angle, in radians.
+      :type pitch: float
+      :param yaw_rate: Desired yaw rate, in radian per second.
+      :type yaw_rate: float
+      :param throttle: Desired throttle (between 0.0 to 1.0)
+      :type throttle: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveByRollPitchYawrateZAsync(self, roll, pitch, yaw_rate, z, duration, vehicle_name='')
+
+
+      - z is given in local NED frame of the vehicle.
+      - Roll angle, pitch angle, and yaw rate set points are given in **radians**, in the body frame.
+      - The body frame follows the Front Left Up (FLU) convention, and right-handedness.
+
+      - Frame Convention:
+          - X axis is along the **Front** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **roll** angle.
+          | Hence, rolling with a positive angle is equivalent to translating in the **right** direction, w.r.t. our FLU body frame.
+
+          - Y axis is along the **Left** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **pitch** angle.
+          | Hence, pitching with a positive angle is equivalent to translating in the **front** direction, w.r.t. our FLU body frame.
+
+          - Z axis is along the **Up** direction.
+
+          | Clockwise rotation about this axis defines a positive **yaw** angle.
+          | Hence, yawing with a positive angle is equivalent to rotated towards the **left** direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.
+
+      :param roll: Desired roll angle, in radians.
+      :type roll: float
+      :param pitch: Desired pitch angle, in radians.
+      :type pitch: float
+      :param yaw_rate: Desired yaw rate, in radian per second.
+      :type yaw_rate: float
+      :param z: Desired Z value (in local NED frame of the vehicle)
+      :type z: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveByAngleRatesZAsync(self, roll_rate, pitch_rate, yaw_rate, z, duration, vehicle_name='')
+
+
+      - z is given in local NED frame of the vehicle.
+      - Roll rate, pitch rate, and yaw rate set points are given in **radians**, in the body frame.
+      - The body frame follows the Front Left Up (FLU) convention, and right-handedness.
+
+      - Frame Convention:
+          - X axis is along the **Front** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **roll** angle.
+          | Hence, rolling with a positive angle is equivalent to translating in the **right** direction, w.r.t. our FLU body frame.
+
+          - Y axis is along the **Left** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **pitch** angle.
+          | Hence, pitching with a positive angle is equivalent to translating in the **front** direction, w.r.t. our FLU body frame.
+
+          - Z axis is along the **Up** direction.
+
+          | Clockwise rotation about this axis defines a positive **yaw** angle.
+          | Hence, yawing with a positive angle is equivalent to rotated towards the **left** direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.
+
+      :param roll_rate: Desired roll rate, in radians / second
+      :type roll_rate: float
+      :param pitch_rate: Desired pitch rate, in radians / second
+      :type pitch_rate: float
+      :param yaw_rate: Desired yaw rate, in radians / second
+      :type yaw_rate: float
+      :param z: Desired Z value (in local NED frame of the vehicle)
+      :type z: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: moveByAngleRatesThrottleAsync(self, roll_rate, pitch_rate, yaw_rate, throttle, duration, vehicle_name='')
+
+
+      - Desired throttle is between 0.0 to 1.0
+      - Roll rate, pitch rate, and yaw rate set points are given in **radians**, in the body frame.
+      - The body frame follows the Front Left Up (FLU) convention, and right-handedness.
+
+      - Frame Convention:
+          - X axis is along the **Front** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **roll** angle.
+          | Hence, rolling with a positive angle is equivalent to translating in the **right** direction, w.r.t. our FLU body frame.
+
+          - Y axis is along the **Left** direction of the quadrotor.
+
+          | Clockwise rotation about this axis defines a positive **pitch** angle.
+          | Hence, pitching with a positive angle is equivalent to translating in the **front** direction, w.r.t. our FLU body frame.
+
+          - Z axis is along the **Up** direction.
+
+          | Clockwise rotation about this axis defines a positive **yaw** angle.
+          | Hence, yawing with a positive angle is equivalent to rotated towards the **left** direction wrt our FLU body frame. Or in an anticlockwise fashion in the body XY / FL plane.
+
+      :param roll_rate: Desired roll rate, in radians / second
+      :type roll_rate: float
+      :param pitch_rate: Desired pitch rate, in radians / second
+      :type pitch_rate: float
+      :param yaw_rate: Desired yaw rate, in radians / second
+      :type yaw_rate: float
+      :param throttle: Desired throttle (between 0.0 to 1.0)
+      :type throttle: float
+      :param duration: Desired amount of time (seconds), to send this command for
+      :type duration: float
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+      :returns: future. call .join() to wait for method to finish. Example: client.METHOD().join()
+      :rtype: msgpackrpc.future.Future
+
+
+   .. method:: setAngleRateControllerGains(self, angle_rate_gains=AngleRateControllerGains(), vehicle_name='')
+
+
+      - Modifying these gains will have an affect on *ALL* move*() APIs.
+          This is because any velocity setpoint is converted to an angle level setpoint which is tracked with an angle level controllers.
+          That angle level setpoint is itself tracked with and angle rate controller.
+      - This function should only be called if the default angle rate control PID gains need to be modified.
+
+      :param angle_rate_gains:
+                               - Correspond to the roll, pitch, yaw axes, defined in the body frame.
+                               - Pass AngleRateControllerGains() to reset gains to default recommended values.
+      :type angle_rate_gains: AngleRateControllerGains
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+
+   .. method:: setAngleLevelControllerGains(self, angle_level_gains=AngleLevelControllerGains(), vehicle_name='')
+
+
+      - Sets angle level controller gains (used by any API setting angle references - for ex: moveByRollPitchYawZAsync(), moveByRollPitchYawThrottleAsync(), etc)
+      - Modifying these gains will also affect the behaviour of moveByVelocityAsync() API.
+          This is because the AirSim flight controller will track velocity setpoints by converting them to angle set points.
+      - This function should only be called if the default angle level control PID gains need to be modified.
+      - Passing AngleLevelControllerGains() sets gains to default airsim values.
+
+      :param angle_level_gains:
+                                - Correspond to the roll, pitch, yaw axes, defined in the body frame.
+                                - Pass AngleLevelControllerGains() to reset gains to default recommended values.
+      :type angle_level_gains: AngleLevelControllerGains
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+
+   .. method:: setVelocityControllerGains(self, velocity_gains=VelocityControllerGains(), vehicle_name='')
+
+
+      - Sets velocity controller gains for moveByVelocityAsync().
+      - This function should only be called if the default velocity control PID gains need to be modified.
+      - Passing VelocityControllerGains() sets gains to default airsim values.
+      - Modifying the velocity controller gains will have an effect on the trajectory tracking behavior of moveOnSpline*() APIs,
+          as moveOnSpline*() APIs use a controller on the lines of the pure-pursuit approach, which is tracking the reference position and
+          velocities of the reference trajectories, while minimizing cross-track errors in both position and velocity state,
+          by sending velocity commands (via moveByVelocityAsync()) in the backend.
+          If you change this, it might be worth playing with the gains of moveOnSpline() by using setTrajectoryTrackerGains()
+
+      :param velocity_gains:
+                             - Correspond to the world X, Y, Z axes.
+                             - Pass VelocityControllerGains() to reset gains to default recommended values.
+                             - Modifying velocity controller gains will have an affect on the behaviour of moveOnSplineAsync() and moveOnSplineVelConstraintsAsync(), as they both use velocity control to track the trajectory.
+      :type velocity_gains: VelocityControllerGains
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+
+   .. method:: setPositionControllerGains(self, position_gains=PositionControllerGains(), vehicle_name='')
+
+
+      Sets position controller gains for moveByPositionAsync.
+      This function should only be called if the default position control PID gains need to be modified.
+
+      :param position_gains:
+                             - Correspond to the X, Y, Z axes.
+                             - Pass PositionControllerGains() to reset gains to default recommended values.
+      :type position_gains: PositionControllerGains
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str, optional
+
+
+   .. method:: getMultirotorState(self, vehicle_name='')
+
+
+      :param vehicle_name: Vehicle to get the state of
+      :type vehicle_name: str, optional
+
+      :returns:
+      :rtype: MultirotorState
+
+
+   .. method:: simLogMultirotorState(self, is_enabled, vehicle_name='')
+
+
+      Starts or stops high frequency logging of full multirotor state to a text file in Documents/AirSim.
+      Values logged: Position, orientation, linear/angular velocity, linear/angular acceleration,
+      body forces and torques, rotor speeds and rotor torques.
+
+      :param is_enabled: Start/stop.
+      :type is_enabled: bool, required
+      :param vehicle_name: Vehicle to start logging for
+      :type vehicle_name: str, optional
+
+
+   .. method:: simStartRace(self, tier=1)
+
+
+      Starts an instance of a race in your given level, if valid.
+
+
+   .. method:: __internalRandomGoalZone(self, gate_name)
+
+
+
+   .. method:: simResetRace(self)
+
+
+      Resets a current race: moves players to start positions, timer and penalties reset.
+
+
+   .. method:: simDisableRaceLog(self)
+
+
+      Disables race log
+
+
+
