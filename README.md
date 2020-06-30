@@ -4,10 +4,9 @@
 
 ## Quickstart
 - [Linux and Windows Binaries](https://github.com/microsoft/AirSim-Drone-Racing-Lab/releases)
-- Python API
-	- Installation:  
-		- [`pip install airsimdroneracinglab`](https://pypi.org/project/airsimdroneracinglab/)
-		- [API Docs](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html) 
+- Python API:    
+  - [`pip install airsimdroneracinglab`](https://pypi.org/project/airsimdroneracinglab/)   
+  - [Documentation](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html) 
 
 Note: If you use this repository in your research, please cite our pre-print, [AirSim Drone Racing Lab](https://arxiv.org/abs/2003.05654).
 
@@ -25,8 +24,11 @@ Note: If you use this repository in your research, please cite our pre-print, [A
 - [Windows](docs/using_binaries.md#windows)
 - [Docker on Linux](docs/docker.md)
 
-## AirSim Drone Racing Lab Features and API
-- The API is documented [here](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html)
-    
+## Using ADRL
+- [Overview](docs/api_overview.md)
+- [Baselines](docs/baselines.md)
+- [Race Monitoring](docs/race_monitoring.md)
+- [Documentation](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html)
+
 ## Questions
 Please open a Github Issue on **this** repository (not [AirSim](https://github.com/microsoft/AirSim)) for any technical questions associated with AirSim Drone Racing Lab. 
