@@ -1572,4 +1572,24 @@ Classes
       Disables race log
 
 
+   .. method:: simIsRacerDisqualified(self, vehicle_name)
+
+
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str
+
+      :returns: True if vehicle_name is disqualified. False if not
+      :rtype: bool
+
+
+   .. method:: simGetLastGatePassed(self, vehicle_name)
+
+
+      :param vehicle_name: Name of the multirotor to send this command to
+      :type vehicle_name: str
+
+      :returns: index of last gate passed by vehicle_name
+      :rtype: int
+
+
 

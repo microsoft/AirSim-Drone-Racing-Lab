@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>airsimdroneracinglab &mdash; airsimdroneracinglab 1.0.0 documentation</title>
+  <title>airsimdroneracinglab &mdash; airsimdroneracinglab 1.0.1 documentation</title>
   
 
   
@@ -3159,6 +3159,38 @@ body forces and torques, rotor speeds and rotor torques.</p>
 <dt id="airsimdroneracinglab.MultirotorClient.simDisableRaceLog">
 <code class="sig-name descname">simDisableRaceLog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.MultirotorClient.simDisableRaceLog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disables race log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.MultirotorClient.simIsRacerDisqualified">
+<code class="sig-name descname">simIsRacerDisqualified</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.MultirotorClient.simIsRacerDisqualified" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the multirotor to send this command to</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if vehicle_name is disqualified. False if not</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="airsimdroneracinglab.MultirotorClient.simGetLastGatePassed">
+<code class="sig-name descname">simGetLastGatePassed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">vehicle_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#airsimdroneracinglab.MultirotorClient.simGetLastGatePassed" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vehicle_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of the multirotor to send this command to</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>index of last gate passed by vehicle_name</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
