@@ -19,13 +19,14 @@ Note: If you use this repository in your research, please cite our pre-print, [A
 }
 ```
 
-### Using AirSim Drone Racing Lab Binaries
+## Getting Binaries
 - [Linux](docs/using_binaries.md#linux)
 - [Windows](docs/using_binaries.md#windows)
 - [Docker on Linux](docs/docker.md)
 
-## Using ADRL
-- [Overview](docs/api_overview.md)
+## Using AirSim Drone Racing Lab
+- [AirSim Drone Racing Lab Overview](docs/adrl_overview.md)
+- [API Overview](docs/api_overview.md)
 - [Baselines](docs/baselines.md)
 - [Race Monitoring](docs/race_monitoring.md)
 - [Documentation](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html)
