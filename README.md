@@ -29,7 +29,7 @@ Note: If you use this repository in your research, please cite our pre-print, [A
 - [API Overview](docs/api_overview.md)
 - [Baselines](docs/baselines.md)
 - [Race Monitoring](docs/race_monitoring.md)
-- [Documentation](https://microsoft.github.io/AirSim-Drone-Racing-Lab/api.html)
+- [Documentation](https://microsoft.github.io/AirSim-Drone-Racing-Lab)
 
 ## Questions
 Please open a Github Issue on **this** repository (not [AirSim](https://github.com/microsoft/AirSim)) for any technical questions associated with AirSim Drone Racing Lab. 
