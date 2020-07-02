@@ -3,7 +3,7 @@
   "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
   "SettingsVersion": 1.2,
   "SimMode": "Multirotor",
-  "ViewMode": "NoDisplay", 
+  "ViewMode": "NoDisplay",
   "Vehicles": {
     "drone_1": {
       "Cameras": {
